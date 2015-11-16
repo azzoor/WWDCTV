@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		541C84B11BFA953500FE5B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B01BFA953500FE5B5D /* main.m */; };
+		541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B31BFA953500FE5B5D /* AppDelegate.m */; };
+		541C84B71BFA953500FE5B5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B61BFA953500FE5B5D /* ViewController.m */; };
+		541C84BA1BFA953500FE5B5D /* WWDC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B81BFA953500FE5B5D /* WWDC.xcdatamodeld */; };
+		541C84BD1BFA953500FE5B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541C84BB1BFA953500FE5B5D /* Main.storyboard */; };
+		541C84BF1BFA953500FE5B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 541C84BE1BFA953500FE5B5D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		541C84AC1BFA953500FE5B5D /* WWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		541C84B01BFA953500FE5B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		541C84B21BFA953500FE5B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		541C84B31BFA953500FE5B5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		541C84B51BFA953500FE5B5D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		541C84B61BFA953500FE5B5D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		541C84B91BFA953500FE5B5D /* WWDC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WWDC.xcdatamodel; sourceTree = "<group>"; };
+		541C84BC1BFA953500FE5B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		541C84BE1BFA953500FE5B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		541C84C01BFA953500FE5B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		541C84A91BFA953500FE5B5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		541C84A31BFA953500FE5B5D = {
+			isa = PBXGroup;
+			children = (
+				541C84AE1BFA953500FE5B5D /* WWDC */,
+				541C84AD1BFA953500FE5B5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		541C84AD1BFA953500FE5B5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				541C84AC1BFA953500FE5B5D /* WWDC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		541C84AE1BFA953500FE5B5D /* WWDC */ = {
+			isa = PBXGroup;
+			children = (
+				541C84B21BFA953500FE5B5D /* AppDelegate.h */,
+				541C84B31BFA953500FE5B5D /* AppDelegate.m */,
+				541C84B51BFA953500FE5B5D /* ViewController.h */,
+				541C84B61BFA953500FE5B5D /* ViewController.m */,
+				541C84BB1BFA953500FE5B5D /* Main.storyboard */,
+				541C84BE1BFA953500FE5B5D /* Assets.xcassets */,
+				541C84C01BFA953500FE5B5D /* Info.plist */,
+				541C84B81BFA953500FE5B5D /* WWDC.xcdatamodeld */,
+				541C84AF1BFA953500FE5B5D /* Supporting Files */,
+			);
+			path = WWDC;
+			sourceTree = "<group>";
+		};
+		541C84AF1BFA953500FE5B5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				541C84B01BFA953500FE5B5D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		541C84AB1BFA953500FE5B5D /* WWDC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 541C84C31BFA953500FE5B5D /* Build configuration list for PBXNativeTarget "WWDC" */;
+			buildPhases = (
+				541C84A81BFA953500FE5B5D /* Sources */,
+				541C84A91BFA953500FE5B5D /* Frameworks */,
+				541C84AA1BFA953500FE5B5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WWDC;
+			productName = WWDC;
+			productReference = 541C84AC1BFA953500FE5B5D /* WWDC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		541C84A41BFA953500FE5B5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Bronron Apps";
+				TargetAttributes = {
+					541C84AB1BFA953500FE5B5D = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 541C84A71BFA953500FE5B5D /* Build configuration list for PBXProject "WWDC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 541C84A31BFA953500FE5B5D;
+			productRefGroup = 541C84AD1BFA953500FE5B5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				541C84AB1BFA953500FE5B5D /* WWDC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		541C84AA1BFA953500FE5B5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				541C84BF1BFA953500FE5B5D /* Assets.xcassets in Resources */,
+				541C84BD1BFA953500FE5B5D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		541C84A81BFA953500FE5B5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				541C84B71BFA953500FE5B5D /* ViewController.m in Sources */,
+				541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */,
+				541C84BA1BFA953500FE5B5D /* WWDC.xcdatamodeld in Sources */,
+				541C84B11BFA953500FE5B5D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		541C84BB1BFA953500FE5B5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				541C84BC1BFA953500FE5B5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		541C84C11BFA953500FE5B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		541C84C21BFA953500FE5B5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		541C84C41BFA953500FE5B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = WWDC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bronron.WWDC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		541C84C51BFA953500FE5B5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = WWDC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bronron.WWDC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		541C84A71BFA953500FE5B5D /* Build configuration list for PBXProject "WWDC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				541C84C11BFA953500FE5B5D /* Debug */,
+				541C84C21BFA953500FE5B5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		541C84C31BFA953500FE5B5D /* Build configuration list for PBXNativeTarget "WWDC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				541C84C41BFA953500FE5B5D /* Debug */,
+				541C84C51BFA953500FE5B5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		541C84B81BFA953500FE5B5D /* WWDC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				541C84B91BFA953500FE5B5D /* WWDC.xcdatamodel */,
+			);
+			currentVersion = 541C84B91BFA953500FE5B5D /* WWDC.xcdatamodel */;
+			path = WWDC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 541C84A41BFA953500FE5B5D /* Project object */;
+}
