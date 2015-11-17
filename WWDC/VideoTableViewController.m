@@ -32,10 +32,10 @@
     //Setup the Section Array so there are videos to show in the tableView
     for (NSDictionary *videoDictionary in allVideos)
     {
-        if (! [[videoDictionary objectForKey:kConferenceKey] isEqualToString:self.conference_id]) continue;
+        if (! [videoDictionary[kConferenceKey] isEqualToString:self.conference_id]) continue;
         
         //Does the conference already appear in the section array?
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", [videoDictionary objectForKey:kConferenceKey]];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", videoDictionary[kConferenceKey]];
         NSArray *filterdArray = [[self.sectionArray filteredArrayUsingPredicate:predicate] mutableCopy];
         if ([filterdArray count] > 0)
         {
@@ -43,7 +43,7 @@
             NSMutableDictionary *sectionDictionary = [filterdArray firstObject];
             NSInteger sectionIndex = [self.sectionArray indexOfObject:sectionDictionary];
             
-            NSMutableArray *videosArray = [[NSMutableArray alloc] initWithArray:[sectionDictionary objectForKey:kVideosKey]];
+            NSMutableArray *videosArray = [[NSMutableArray alloc] initWithArray:sectionDictionary[kVideosKey]];
             [videosArray addObject:videoDictionary];
             [sectionDictionary setObject:videosArray forKey:kVideosKey];
             [self.sectionArray replaceObjectAtIndex:sectionIndex withObject:sectionDictionary];
@@ -52,7 +52,7 @@
         {
             //Conference doesn't appear so add it plus add the video
             NSMutableDictionary *sectionDictionary = [NSMutableDictionary new];
-            [sectionDictionary setObject:[videoDictionary objectForKey:kConferenceKey] forKey:kConferenceKey];
+            [sectionDictionary setObject:videoDictionary[kConferenceKey] forKey:kConferenceKey];
             [sectionDictionary setObject:@[videoDictionary] forKey:kVideosKey];
             [self.sectionArray addObject:sectionDictionary];
         }
@@ -64,10 +64,10 @@
     if ([self.sectionArray count] > 0)
     {
         NSDictionary *sectionDictionary =  [self.sectionArray firstObject];
-        NSArray *videoArray =  [sectionDictionary objectForKey:kVideosKey];
+        NSArray *videoArray = sectionDictionary[kVideosKey];
         if ([videoArray count] > 0)
         {
-            NSDictionary *videoObjectDictionary =  [videoArray firstObject];
+            NSDictionary *videoObjectDictionary = [videoArray firstObject];
             
             VideoDetailViewController *viewTmp = [self.splitViewController.viewControllers objectAtIndex:1];
             [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
@@ -91,7 +91,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSDictionary *sectionDictionary =  [self.sectionArray objectAtIndex:section];
-    return [[sectionDictionary objectForKey:kVideosKey]count];
+    return [sectionDictionary[kVideosKey] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -105,11 +105,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    NSDictionary *sectionDictionary =  [self.sectionArray objectAtIndex:indexPath.section];
-    NSArray *videoArray =  [sectionDictionary objectForKey:kVideosKey];
-    NSDictionary *videoObjectDictionary =  [videoArray objectAtIndex:indexPath.row];
+    NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:indexPath.section];
+    NSArray *videoArray = sectionDictionary[kVideosKey];
+    NSDictionary *videoObjectDictionary = [videoArray objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = [videoObjectDictionary objectForKey:kTitleKey];
+    cell.textLabel.text = videoObjectDictionary[kTitleKey];
     cell.textLabel.font = [UIFont systemFontOfSize:22];
     return cell;
 }
@@ -120,9 +120,9 @@
     NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
     if (nextIndexPath != nil)
     {
-        NSDictionary *sectionDictionary =  [self.sectionArray objectAtIndex:nextIndexPath.section];
-        NSArray *videoArray =  [sectionDictionary objectForKey:kVideosKey];
-        NSDictionary *videoObjectDictionary =  [videoArray objectAtIndex:nextIndexPath.row];
+        NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:nextIndexPath.section];
+        NSArray *videoArray = sectionDictionary[kVideosKey];
+        NSDictionary *videoObjectDictionary = [videoArray objectAtIndex:nextIndexPath.row];
         
         VideoDetailViewController *viewTmp = [self.splitViewController.viewControllers objectAtIndex:1];
         [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
@@ -131,7 +131,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    NSDictionary *sectionDictionary =  [self.sectionArray objectAtIndex:section];
+    NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:section];
     return [sectionDictionary objectForKey:kConferenceKey];
 }
 
