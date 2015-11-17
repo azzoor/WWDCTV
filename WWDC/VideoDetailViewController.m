@@ -46,10 +46,10 @@
 //Plays the video on selecting the Play Video button
 - (IBAction)playVideo:(id)sender
 {
-    AVPlayerViewController *viewTmp = [[AVPlayerViewController alloc]init];
-    AVPlayer *player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:[self.videoDictionary objectForKey:kVideoURLKey]]];
-    viewTmp.player = player;
-    [self presentViewController:viewTmp animated:true completion:^{
+    AVPlayerViewController *vc = [AVPlayerViewController new];
+    AVPlayer *player = [AVPlayer playerWithURL:[NSURL URLWithString:self.videoDictionary[kVideoURLKey]]];
+    vc.player = player;
+    [self presentViewController:vc animated:true completion:^{
         [player play];
     }];
 }
