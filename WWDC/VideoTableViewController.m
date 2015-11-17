@@ -35,25 +35,19 @@
     
     NSArray *allVideos = [self readJSON];
     NSArray *videosForThisConference = [allVideos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", self.conference_id]];
-    
     self.sectionArray = @[@{kConferenceKey: self.conference_id,
                             kVideosKey: videosForThisConference}];
-    
+
     [self.tableView reloadData];
     
-    //Selects the first item.
-    if ([self.sectionArray count] > 0)
-    {
-        NSDictionary *sectionDictionary =  [self.sectionArray firstObject];
-        NSArray *videoArray = sectionDictionary[kVideosKey];
-        if ([videoArray count] > 0)
-        {
-            NSDictionary *videoObjectDictionary = [videoArray firstObject];
-            
-            VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
-            [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
-        }
-    }
+    //Select the first item.
+    NSDictionary *sectionDictionary = [self.sectionArray firstObject];
+    NSArray *videoArray = sectionDictionary[kVideosKey];
+    NSDictionary *videoObjectDictionary = [videoArray firstObject];
+    if (videoObjectDictionary == nil) return;
+    
+    VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
+    [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,21 +93,14 @@
 - (void)tableView:(UITableView *)tableView didUpdateFocusInContext:(UITableViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
 {
     NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
-    if (nextIndexPath != nil)
-    {
-        NSDictionary *sectionDictionary = self.sectionArray[nextIndexPath.section];
-        NSArray *videoArray = sectionDictionary[kVideosKey];
-        NSDictionary *videoObjectDictionary = videoArray[nextIndexPath.row];
-        
-        VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
-        [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
-    }
-}
+    if (nextIndexPath == nil) return;
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:section];
-//    return [sectionDictionary objectForKey:kConferenceKey];
-//}
+    NSDictionary *sectionDictionary = self.sectionArray[nextIndexPath.section];
+    NSArray *videoArray = sectionDictionary[kVideosKey];
+    NSDictionary *videoObjectDictionary = videoArray[nextIndexPath.row];
+    
+    VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
+    [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
+}
 
 @end
