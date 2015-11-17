@@ -36,11 +36,11 @@
         
         //Does the conference already appear in the section array?
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", videoDictionary[kConferenceKey]];
-        NSArray *filterdArray = [[self.sectionArray filteredArrayUsingPredicate:predicate] mutableCopy];
-        if ([filterdArray count] > 0)
+        NSArray *filteredArray = [[self.sectionArray filteredArrayUsingPredicate:predicate] mutableCopy];
+        if ([filteredArray count] > 0)
         {
             //Conference does appear so add the video to the conference section
-            NSMutableDictionary *sectionDictionary = [filterdArray firstObject];
+            NSMutableDictionary *sectionDictionary = [filteredArray firstObject];
             NSInteger sectionIndex = [self.sectionArray indexOfObject:sectionDictionary];
             
             NSMutableArray *videosArray = [[NSMutableArray alloc] initWithArray:sectionDictionary[kVideosKey]];
