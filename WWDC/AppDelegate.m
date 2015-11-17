@@ -16,8 +16,7 @@
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+-(NSArray *) readJSON
 {
     //Get JSON
     NSMutableArray *videoArray = [NSMutableArray new];
@@ -38,6 +37,14 @@
             [videoArray addObject:[videoDictionary objectForKey:kConferenceKey]];
         }
     }
+    
+    return [videoArray copy];
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSArray *videoArray = [self readJSON];
     
     // Override point for customization after application launch.
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
