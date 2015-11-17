@@ -13,6 +13,6 @@ The JSON file could at any point become invalid due to the links to the videos.
 
 Follow me on Twitter [@iOSAaron](https://twitter.com/iOSaaron)
 
-![Alt text](/WWDC/screenshot01.png?raw=true "Screenshot 1")
+![Alt text](/WWDC/screenshot03.png?raw=true "Screenshot 1")
 
-![Alt text](/WWDC/screenshot02.png?raw=true "Screenshot 2")
+![Alt text](/WWDC/screenshot04.png?raw=true "Screenshot 2")
