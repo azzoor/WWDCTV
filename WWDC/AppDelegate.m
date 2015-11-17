@@ -53,15 +53,14 @@
     //Setup each tabBarItem. Note that there is a limit of 5 tabbar items.
     for (NSString *conferenceID in videoArray)
     {
+        if ([conferenceViewArray count] >= 5) break;
+
         UISplitViewController *splitViewController = [storyboard instantiateViewControllerWithIdentifier:@"SplitViewController"];
         splitViewController.tabBarItem.title = conferenceID;
         UINavigationController *navController = [splitViewController.viewControllers firstObject];
-        VideoTableViewController *viewTmp = (VideoTableViewController *)[navController.viewControllers firstObject];
-        viewTmp.conference_id = conferenceID;
-        if ([conferenceViewArray count] < 5)
-        {
-            [conferenceViewArray addObject:splitViewController];
-        }
+        VideoTableViewController *vc = (VideoTableViewController *)[navController.viewControllers firstObject];
+        vc.conference_id = conferenceID;
+        [conferenceViewArray addObject:splitViewController];
     }
 
     //Setup the tabBarController
