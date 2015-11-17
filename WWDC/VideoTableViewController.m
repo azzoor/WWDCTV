@@ -129,10 +129,10 @@
     }
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:section];
-    return [sectionDictionary objectForKey:kConferenceKey];
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:section];
+//    return [sectionDictionary objectForKey:kConferenceKey];
+//}
 
 @end
