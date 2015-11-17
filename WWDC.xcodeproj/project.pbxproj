@@ -72,13 +72,6 @@
 				541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */,
 				541C84CD1BFAE2F000FE5B5D /* VideoDetailViewController.h */,
 				541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */,
-				541C84BB1BFA953500FE5B5D /* Main.storyboard */,
-				541C84BE1BFA953500FE5B5D /* Assets.xcassets */,
-				541C84C01BFA953500FE5B5D /* Info.plist */,
-				541C84D01BFAF6DD00FE5B5D /* Header.h */,
-				541C84C81BFADEA400FE5B5D /* videos.json */,
-				541C84D31BFB3F6D00FE5B5D /* screenshot02.png */,
-				541C84D41BFB3F6D00FE5B5D /* screenshot01.png */,
 				541C84AF1BFA953500FE5B5D /* Supporting Files */,
 			);
 			path = WWDC;
@@ -87,6 +80,13 @@
 		541C84AF1BFA953500FE5B5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				541C84BB1BFA953500FE5B5D /* Main.storyboard */,
+				541C84BE1BFA953500FE5B5D /* Assets.xcassets */,
+				541C84C01BFA953500FE5B5D /* Info.plist */,
+				541C84D01BFAF6DD00FE5B5D /* Header.h */,
+				541C84C81BFADEA400FE5B5D /* videos.json */,
+				541C84D31BFB3F6D00FE5B5D /* screenshot02.png */,
+				541C84D41BFB3F6D00FE5B5D /* screenshot01.png */,
 				541C84B01BFA953500FE5B5D /* main.m */,
 			);
 			name = "Supporting Files";

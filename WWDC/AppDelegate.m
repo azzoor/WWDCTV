@@ -16,35 +16,9 @@
 
 @implementation AppDelegate
 
--(NSArray *) readJSON
-{
-    //Get JSON
-    NSMutableArray *videoArray = [NSMutableArray new];
-    NSError *error = nil;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    
-    //Sorts the conferences by order_id this has been onfigured to ensure the newer conferences appear first.
-    NSSortDescriptor *brandDescriptor = [[NSSortDescriptor alloc] initWithKey:kOrderIDKey ascending:true];
-    allVideos = [allVideos sortedArrayUsingDescriptors:@[brandDescriptor]];
-    
-    //Get the conference ids which are to be used for the tabBarController
-    for (NSDictionary *videoDictionary in allVideos)
-    {
-        if (![videoArray containsObject:[videoDictionary objectForKey:kConferenceKey]])
-        {
-            [videoArray addObject:[videoDictionary objectForKey:kConferenceKey]];
-        }
-    }
-    
-    return [videoArray copy];
-}
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray *videoArray = [self readJSON];
+    NSArray *videoArray = [self readJSONFile];
     
     // Override point for customization after application launch.
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -70,6 +44,31 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (NSArray *)readJSONFile
+{
+    //Get JSON
+    NSMutableArray *videoArray = [NSMutableArray new];
+    NSError *error = nil;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    //Sorts the conferences by order_id this has been onfigured to ensure the newer conferences appear first.
+    NSSortDescriptor *brandDescriptor = [[NSSortDescriptor alloc] initWithKey:kOrderIDKey ascending:true];
+    allVideos = [allVideos sortedArrayUsingDescriptors:@[brandDescriptor]];
+    
+    //Get the conference ids which are to be used for the tabBarController
+    for (NSDictionary *videoDictionary in allVideos)
+    {
+        if (![videoArray containsObject:[videoDictionary objectForKey:kConferenceKey]])
+        {
+            [videoArray addObject:[videoDictionary objectForKey:kConferenceKey]];
+        }
+    }
+    
+    return [videoArray copy];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -16,24 +16,13 @@
 
 @implementation VideoTableViewController
 
--(NSArray *) readJSON
-{
-    //Get JSON File
-    NSError *error = nil;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-
-    return allVideos;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     self.title = self.conference_id;
     
-    NSArray *allVideos = [self readJSON];
+    NSArray *allVideos = [self readJSONFile];
     NSArray *videosForThisConference = [allVideos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", self.conference_id]];
     self.sectionArray = @[@{kConferenceKey: self.conference_id,
                             kVideosKey: videosForThisConference}];
@@ -54,6 +43,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSArray *)readJSONFile
+{
+    //Get JSON File
+    NSError *error = nil;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    return allVideos;
 }
 
 #pragma mark - Table view data source
@@ -77,7 +77,7 @@
     
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
     
     NSDictionary *sectionDictionary = self.sectionArray[indexPath.section];
@@ -85,7 +85,9 @@
     NSDictionary *videoObjectDictionary = videoArray[indexPath.row];
 
     cell.textLabel.text = videoObjectDictionary[kTitleKey];
+    cell.detailTextLabel.text = videoObjectDictionary[kSessionIDKey];
     cell.textLabel.font = [UIFont systemFontOfSize:22];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:22];
     return cell;
 }
 
