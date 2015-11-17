@@ -11,7 +11,7 @@
 #import "VideoTableViewController.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong)UITabBarController *tabBarController;
+@property (nonatomic, strong) UITabBarController *tabBarController;
 @end
 
 @implementation AppDelegate
@@ -20,11 +20,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Get JSON
-    NSMutableArray *videoArray = [[NSMutableArray alloc]init];
+    NSMutableArray *videoArray = [NSMutableArray new];
     NSError *error = nil;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
     //Sorts the conferences by order_id this has been onfigured to ensure the newer conferences appear first.
     NSSortDescriptor *brandDescriptor = [[NSSortDescriptor alloc] initWithKey:kOrderIDKey ascending:true];
@@ -41,7 +41,7 @@
     
     // Override point for customization after application launch.
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    NSMutableArray *conferenceViewArray = [[NSMutableArray alloc]init];
+    NSMutableArray *conferenceViewArray = [NSMutableArray new];
     
     //Setup each tabBarItem. Note that there is a limit of 5 tabbar items.
     for (NSString *conferenceID in videoArray)
@@ -58,7 +58,7 @@
     }
 
     //Setup the tabBarController
-    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController = [UITabBarController new];
     self.tabBarController.viewControllers = conferenceViewArray;
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
