@@ -11,52 +11,33 @@
 #import "Header.h"
 
 @interface VideoTableViewController ()
-@property (nonatomic, strong) NSMutableArray *sectionArray;
+@property (nonatomic, strong) NSArray *sectionArray;
 @end
 
 @implementation VideoTableViewController
 
-- (void)viewDidLoad
+-(NSArray *) readJSON
 {
-    [super viewDidLoad];
-    self.sectionArray = [NSMutableArray new];
-    
-    self.title = self.conference_id;
-    
     //Get JSON File
     NSError *error = nil;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+
+    return allVideos;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    self.title = self.conference_id;
     
-    //Setup the Section Array so there are videos to show in the tableView
-    for (NSDictionary *videoDictionary in allVideos)
-    {
-        if (! [videoDictionary[kConferenceKey] isEqualToString:self.conference_id]) continue;
-        
-        //Does the conference already appear in the section array?
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", videoDictionary[kConferenceKey]];
-        NSArray *filteredArray = [self.sectionArray filteredArrayUsingPredicate:predicate];
-        if ([filteredArray count] > 0)
-        {
-            //Conference does appear so add the video to the conference section
-            NSMutableDictionary *sectionDictionary = [filteredArray firstObject];
-            NSInteger sectionIndex = [self.sectionArray indexOfObject:sectionDictionary];
-            
-            NSMutableArray *videosArray = [[NSMutableArray alloc] initWithArray:sectionDictionary[kVideosKey]];
-            [videosArray addObject:videoDictionary];
-            [sectionDictionary setObject:videosArray forKey:kVideosKey];
-            [self.sectionArray replaceObjectAtIndex:sectionIndex withObject:sectionDictionary];
-        }
-        else
-        {
-            //Conference doesn't appear so add it plus add the video
-            NSMutableDictionary *sectionDictionary = [NSMutableDictionary new];
-            [sectionDictionary setObject:videoDictionary[kConferenceKey] forKey:kConferenceKey];
-            [sectionDictionary setObject:@[videoDictionary] forKey:kVideosKey];
-            [self.sectionArray addObject:sectionDictionary];
-        }
-    }
+    NSArray *allVideos = [self readJSON];
+    NSArray *videosForThisConference = [allVideos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", self.conference_id]];
+    
+    self.sectionArray = @[@{kConferenceKey: self.conference_id,
+                            kVideosKey: videosForThisConference}];
     
     [self.tableView reloadData];
     
