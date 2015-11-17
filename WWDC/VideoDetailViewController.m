@@ -16,7 +16,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *platformLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sessionIDLabel;
 @property (nonatomic, weak) IBOutlet UITextView *descriptionLabel;
-@property (nonatomic, weak) IBOutlet UILabel *conferenceLabel;
 @property (nonatomic, strong) NSDictionary *videoDictionary;
 @end
 
@@ -42,7 +41,6 @@
     self.platformLabel.text = [self.videoDictionary objectForKey:kPlatformKey];
     self.sessionIDLabel.text = [self.videoDictionary objectForKey:kSessionIDKey];
     self.descriptionLabel.text = [self.videoDictionary objectForKey:kDescriptionKey];
-    self.conferenceLabel.text = [self.videoDictionary objectForKey:kConferenceKey];
 }
 
 //Plays the video on selecting the Play Video button
