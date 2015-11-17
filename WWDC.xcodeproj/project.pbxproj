@@ -14,6 +14,7 @@
 		541C84C91BFADEA400FE5B5D /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = 541C84C81BFADEA400FE5B5D /* videos.json */; };
 		541C84CC1BFAE25900FE5B5D /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */; };
 		541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */; };
+		541C84D21BFB00F900FE5B5D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 541C84D11BFB00F900FE5B5D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		541C84CD1BFAE2F000FE5B5D /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
 		541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewController.m; sourceTree = "<group>"; };
 		541C84D01BFAF6DD00FE5B5D /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		541C84D11BFB00F900FE5B5D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				541C84C01BFA953500FE5B5D /* Info.plist */,
 				541C84D01BFAF6DD00FE5B5D /* Header.h */,
 				541C84C81BFADEA400FE5B5D /* videos.json */,
+				541C84D11BFB00F900FE5B5D /* README.md */,
 				541C84AF1BFA953500FE5B5D /* Supporting Files */,
 			);
 			path = WWDC;
@@ -158,6 +161,7 @@
 			files = (
 				541C84CC1BFAE25900FE5B5D /* VideoTableViewController.m in Sources */,
 				541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */,
+				541C84D21BFB00F900FE5B5D /* README.md in Sources */,
 				541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */,
 				541C84B11BFA953500FE5B5D /* main.m in Sources */,
 			);
