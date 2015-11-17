@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.sectionArray = [[NSMutableArray alloc]init];
+    self.sectionArray = [NSMutableArray new];
     
     self.title = self.conference_id;
     
@@ -27,7 +27,7 @@
     NSError *error = nil;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
     //Setup the Section Array so there are videos to show in the tableView
     for (NSDictionary *videoDictionary in allVideos)
