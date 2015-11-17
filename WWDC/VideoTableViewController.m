@@ -32,30 +32,29 @@
     //Setup the Section Array so there are videos to show in the tableView
     for (NSDictionary *videoDictionary in allVideos)
     {
-        if ([[videoDictionary objectForKey:kConferenceKey] isEqualToString:self.conference_id])
+        if (! [[videoDictionary objectForKey:kConferenceKey] isEqualToString:self.conference_id]) continue;
+        
+        //Does the conference already appear in the section array?
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", [videoDictionary objectForKey:kConferenceKey]];
+        NSArray *filterdArray = [[self.sectionArray filteredArrayUsingPredicate:predicate] mutableCopy];
+        if ([filterdArray count] > 0)
         {
-            //Does the conference already appear in the section array?
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", [videoDictionary objectForKey:kConferenceKey]];
-            NSArray *filterdArray = [[self.sectionArray filteredArrayUsingPredicate:predicate] mutableCopy];
-            if ([filterdArray count] > 0)
-            {
-                //Conference does appear so add the video to the conference section
-                NSMutableDictionary *sectionDictionary = [filterdArray firstObject];
-                NSInteger sectionIndex = [self.sectionArray indexOfObject:sectionDictionary];
-                
-                NSMutableArray *videosArray = [[NSMutableArray alloc]initWithArray:[sectionDictionary objectForKey:kVideosKey]];
-                [videosArray addObject:videoDictionary];
-                [sectionDictionary setObject:videosArray forKey:kVideosKey];
-                [self.sectionArray replaceObjectAtIndex:sectionIndex withObject:sectionDictionary];
-            }
-            else
-            {
-                //Conference doesn't appear so add it plus add the video
-                NSMutableDictionary *sectionDictionary = [[NSMutableDictionary alloc]init];
-                [sectionDictionary setObject:[videoDictionary objectForKey:kConferenceKey] forKey:kConferenceKey];
-                [sectionDictionary setObject:@[videoDictionary] forKey:kVideosKey];
-                [self.sectionArray addObject:sectionDictionary];
-            }
+            //Conference does appear so add the video to the conference section
+            NSMutableDictionary *sectionDictionary = [filterdArray firstObject];
+            NSInteger sectionIndex = [self.sectionArray indexOfObject:sectionDictionary];
+            
+            NSMutableArray *videosArray = [[NSMutableArray alloc] initWithArray:[sectionDictionary objectForKey:kVideosKey]];
+            [videosArray addObject:videoDictionary];
+            [sectionDictionary setObject:videosArray forKey:kVideosKey];
+            [self.sectionArray replaceObjectAtIndex:sectionIndex withObject:sectionDictionary];
+        }
+        else
+        {
+            //Conference doesn't appear so add it plus add the video
+            NSMutableDictionary *sectionDictionary = [NSMutableDictionary new];
+            [sectionDictionary setObject:[videoDictionary objectForKey:kConferenceKey] forKey:kConferenceKey];
+            [sectionDictionary setObject:@[videoDictionary] forKey:kVideosKey];
+            [self.sectionArray addObject:sectionDictionary];
         }
     }
     
