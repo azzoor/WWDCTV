@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		541C84B11BFA953500FE5B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B01BFA953500FE5B5D /* main.m */; };
 		541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B31BFA953500FE5B5D /* AppDelegate.m */; };
-		541C84B71BFA953500FE5B5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B61BFA953500FE5B5D /* ViewController.m */; };
-		541C84BA1BFA953500FE5B5D /* WWDC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B81BFA953500FE5B5D /* WWDC.xcdatamodeld */; };
 		541C84BD1BFA953500FE5B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541C84BB1BFA953500FE5B5D /* Main.storyboard */; };
 		541C84BF1BFA953500FE5B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 541C84BE1BFA953500FE5B5D /* Assets.xcassets */; };
+		541C84C91BFADEA400FE5B5D /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = 541C84C81BFADEA400FE5B5D /* videos.json */; };
+		541C84CC1BFAE25900FE5B5D /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */; };
+		541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,15 @@
 		541C84B01BFA953500FE5B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		541C84B21BFA953500FE5B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		541C84B31BFA953500FE5B5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		541C84B51BFA953500FE5B5D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		541C84B61BFA953500FE5B5D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		541C84B91BFA953500FE5B5D /* WWDC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WWDC.xcdatamodel; sourceTree = "<group>"; };
 		541C84BC1BFA953500FE5B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		541C84BE1BFA953500FE5B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		541C84C01BFA953500FE5B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		541C84C81BFADEA400FE5B5D /* videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
+		541C84CA1BFAE25900FE5B5D /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
+		541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
+		541C84CD1BFAE2F000FE5B5D /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
+		541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewController.m; sourceTree = "<group>"; };
+		541C84D01BFAF6DD00FE5B5D /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +64,15 @@
 			children = (
 				541C84B21BFA953500FE5B5D /* AppDelegate.h */,
 				541C84B31BFA953500FE5B5D /* AppDelegate.m */,
-				541C84B51BFA953500FE5B5D /* ViewController.h */,
-				541C84B61BFA953500FE5B5D /* ViewController.m */,
+				541C84CA1BFAE25900FE5B5D /* VideoTableViewController.h */,
+				541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */,
+				541C84CD1BFAE2F000FE5B5D /* VideoDetailViewController.h */,
+				541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */,
 				541C84BB1BFA953500FE5B5D /* Main.storyboard */,
 				541C84BE1BFA953500FE5B5D /* Assets.xcassets */,
 				541C84C01BFA953500FE5B5D /* Info.plist */,
-				541C84B81BFA953500FE5B5D /* WWDC.xcdatamodeld */,
+				541C84D01BFAF6DD00FE5B5D /* Header.h */,
+				541C84C81BFADEA400FE5B5D /* videos.json */,
 				541C84AF1BFA953500FE5B5D /* Supporting Files */,
 			);
 			path = WWDC;
@@ -138,6 +145,7 @@
 			files = (
 				541C84BF1BFA953500FE5B5D /* Assets.xcassets in Resources */,
 				541C84BD1BFA953500FE5B5D /* Main.storyboard in Resources */,
+				541C84C91BFADEA400FE5B5D /* videos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,9 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541C84B71BFA953500FE5B5D /* ViewController.m in Sources */,
+				541C84CC1BFAE25900FE5B5D /* VideoTableViewController.m in Sources */,
 				541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */,
-				541C84BA1BFA953500FE5B5D /* WWDC.xcdatamodeld in Sources */,
+				541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */,
 				541C84B11BFA953500FE5B5D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,19 +302,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		541C84B81BFA953500FE5B5D /* WWDC.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				541C84B91BFA953500FE5B5D /* WWDC.xcdatamodel */,
-			);
-			currentVersion = 541C84B91BFA953500FE5B5D /* WWDC.xcdatamodel */;
-			path = WWDC.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 541C84A41BFA953500FE5B5D /* Project object */;
 }

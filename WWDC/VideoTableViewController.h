@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  VideoTableViewController.h
 //  WWDC
 //
 //  Created by Aaron Stephenson on 17/11/2015.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface VideoTableViewController : UITableViewController
+@property (nonatomic, strong) NSString *conference_id;
 @end
-
