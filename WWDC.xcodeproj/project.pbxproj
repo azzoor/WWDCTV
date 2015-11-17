@@ -14,7 +14,6 @@
 		541C84C91BFADEA400FE5B5D /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = 541C84C81BFADEA400FE5B5D /* videos.json */; };
 		541C84CC1BFAE25900FE5B5D /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */; };
 		541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */; };
-		541C84D21BFB00F900FE5B5D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 541C84D11BFB00F900FE5B5D /* README.md */; };
 		541C84D51BFB3F6D00FE5B5D /* screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 541C84D31BFB3F6D00FE5B5D /* screenshot02.png */; };
 		541C84D61BFB3F6D00FE5B5D /* screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 541C84D41BFB3F6D00FE5B5D /* screenshot01.png */; };
 /* End PBXBuildFile section */
@@ -33,7 +32,6 @@
 		541C84CD1BFAE2F000FE5B5D /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
 		541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewController.m; sourceTree = "<group>"; };
 		541C84D01BFAF6DD00FE5B5D /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		541C84D11BFB00F900FE5B5D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		541C84D31BFB3F6D00FE5B5D /* screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot02.png; sourceTree = "<group>"; };
 		541C84D41BFB3F6D00FE5B5D /* screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +77,6 @@
 				541C84C01BFA953500FE5B5D /* Info.plist */,
 				541C84D01BFAF6DD00FE5B5D /* Header.h */,
 				541C84C81BFADEA400FE5B5D /* videos.json */,
-				541C84D11BFB00F900FE5B5D /* README.md */,
 				541C84D31BFB3F6D00FE5B5D /* screenshot02.png */,
 				541C84D41BFB3F6D00FE5B5D /* screenshot01.png */,
 				541C84AF1BFA953500FE5B5D /* Supporting Files */,
@@ -169,7 +166,6 @@
 			files = (
 				541C84CC1BFAE25900FE5B5D /* VideoTableViewController.m in Sources */,
 				541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */,
-				541C84D21BFB00F900FE5B5D /* README.md in Sources */,
 				541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */,
 				541C84B11BFA953500FE5B5D /* main.m in Sources */,
 			);
