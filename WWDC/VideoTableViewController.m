@@ -50,7 +50,7 @@
         {
             NSDictionary *videoObjectDictionary = [videoArray firstObject];
             
-            VideoDetailViewController *viewTmp = [self.splitViewController.viewControllers objectAtIndex:1];
+            VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
             [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
         }
     }
@@ -71,7 +71,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSDictionary *sectionDictionary =  [self.sectionArray objectAtIndex:section];
+    NSDictionary *sectionDictionary = self.sectionArray[section];
     return [sectionDictionary[kVideosKey] count];
 }
 
@@ -86,9 +86,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:indexPath.section];
+    NSDictionary *sectionDictionary = self.sectionArray[indexPath.section];
     NSArray *videoArray = sectionDictionary[kVideosKey];
-    NSDictionary *videoObjectDictionary = [videoArray objectAtIndex:indexPath.row];
+    NSDictionary *videoObjectDictionary = videoArray[indexPath.row];
 
     cell.textLabel.text = videoObjectDictionary[kTitleKey];
     cell.textLabel.font = [UIFont systemFontOfSize:22];
@@ -101,11 +101,11 @@
     NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
     if (nextIndexPath != nil)
     {
-        NSDictionary *sectionDictionary = [self.sectionArray objectAtIndex:nextIndexPath.section];
+        NSDictionary *sectionDictionary = self.sectionArray[nextIndexPath.section];
         NSArray *videoArray = sectionDictionary[kVideosKey];
-        NSDictionary *videoObjectDictionary = [videoArray objectAtIndex:nextIndexPath.row];
+        NSDictionary *videoObjectDictionary = videoArray[nextIndexPath.row];
         
-        VideoDetailViewController *viewTmp = [self.splitViewController.viewControllers objectAtIndex:1];
+        VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
         [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
     }
 }
