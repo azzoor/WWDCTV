@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="clk-cX-D8h">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="clk-cX-D8h">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Video Detail View Controller-->
@@ -16,88 +17,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vi-Uy-heJ">
-                                <rect key="frame" x="20" y="75" width="1245" height="46"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="ryh-TL-Phd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbj-mn-ozP">
-                                <rect key="frame" x="493" y="939" width="300" height="86"/>
+                                <rect key="frame" x="20" y="515" width="260" height="86"/>
+                                <animations/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" startsMediaSession="YES"/>
                                 </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="CxM-wg-cKC"/>
-                                    <constraint firstAttribute="height" constant="86" id="EGf-Pw-Z7g"/>
-                                </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Play Video"/>
                                 <connections>
                                     <action selector="playVideo:" destination="Vlb-iU-O9p" eventType="primaryActionTriggered" id="wkG-qe-CuA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTI-LY-zfa">
-                                <rect key="frame" x="21" y="137" width="1245" height="35"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="51d-F5-xKn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkt-RC-00W">
-                                <rect key="frame" x="20" y="238" width="1165" height="665"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="platform" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-an-6ZI">
-                                <rect key="frame" x="20" y="171" width="1245" height="35"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="l7i-Cr-76c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dQ1-kb-SBO">
+                                <rect key="frame" x="20" y="145" width="1245" height="346"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vi-Uy-heJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="69"/>
+                                        <animations/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="g2C-mQ-DQq">
+                                        <rect key="frame" x="0.0" y="77" width="280" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTI-LY-zfa">
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="46"/>
+                                                <animations/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4I-jr-tEH">
+                                                <rect key="frame" x="146" y="8" width="10" height="35"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="platform" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-an-6ZI">
+                                                <rect key="frame" x="168" y="8" width="112" height="35"/>
+                                                <animations/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0z-yA-COU">
+                                        <rect key="frame" x="0.0" y="131" width="1225" height="215"/>
+                                        <animations/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                            </stackView>
                         </subviews>
+                        <animations/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qkt-RC-00W" secondAttribute="trailing" constant="100" id="5Ab-YL-iwZ"/>
-                            <constraint firstItem="1JF-an-6ZI" firstAttribute="leading" secondItem="sTI-LY-zfa" secondAttribute="leading" constant="-1" id="5tP-5M-UXz"/>
-                            <constraint firstItem="qkt-RC-00W" firstAttribute="leading" secondItem="38c-UG-nle" secondAttribute="leading" constant="20" id="DEg-Ei-UCM"/>
-                            <constraint firstItem="sTI-LY-zfa" firstAttribute="trailing" secondItem="2Vi-Uy-heJ" secondAttribute="trailing" constant="1" id="KGG-D1-Z0t"/>
-                            <constraint firstItem="2Vi-Uy-heJ" firstAttribute="top" secondItem="yVh-VR-qhf" secondAttribute="bottom" constant="75" id="Qh3-LX-roz"/>
-                            <constraint firstItem="qkt-RC-00W" firstAttribute="top" secondItem="1JF-an-6ZI" secondAttribute="bottom" constant="32" id="bkb-5u-fqY"/>
-                            <constraint firstItem="fbj-mn-ozP" firstAttribute="centerX" secondItem="38c-UG-nle" secondAttribute="centerX" id="ctD-nS-woH"/>
-                            <constraint firstItem="sTI-LY-zfa" firstAttribute="leading" secondItem="2Vi-Uy-heJ" secondAttribute="leading" constant="1" id="dNO-kW-1Nb"/>
-                            <constraint firstItem="2Vi-Uy-heJ" firstAttribute="leading" secondItem="38c-UG-nle" secondAttribute="leading" constant="20" id="fN3-eD-xDN"/>
-                            <constraint firstAttribute="trailing" secondItem="1JF-an-6ZI" secondAttribute="trailing" constant="20" id="gNa-xb-5xW"/>
-                            <constraint firstItem="sTI-LY-zfa" firstAttribute="top" secondItem="2Vi-Uy-heJ" secondAttribute="bottom" constant="16" id="hm6-8d-S6S"/>
-                            <constraint firstAttribute="trailing" secondItem="2Vi-Uy-heJ" secondAttribute="trailing" constant="20" id="kSa-UG-Gny"/>
-                            <constraint firstItem="1JF-an-6ZI" firstAttribute="top" secondItem="sTI-LY-zfa" secondAttribute="bottom" constant="-1" id="mka-3s-o4z"/>
-                            <constraint firstItem="fbj-mn-ozP" firstAttribute="top" secondItem="qkt-RC-00W" secondAttribute="bottom" constant="36" id="uNx-aW-M6L"/>
-                            <constraint firstItem="MN7-R3-LOA" firstAttribute="top" secondItem="fbj-mn-ozP" secondAttribute="bottom" constant="55" id="xp9-Os-N71"/>
+                            <constraint firstItem="dQ1-kb-SBO" firstAttribute="top" secondItem="yVh-VR-qhf" secondAttribute="bottom" id="Gba-e9-zjn"/>
+                            <constraint firstItem="fbj-mn-ozP" firstAttribute="leading" secondItem="38c-UG-nle" secondAttribute="leadingMargin" id="I8l-hy-TeR"/>
+                            <constraint firstItem="MN7-R3-LOA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fbj-mn-ozP" secondAttribute="bottom" constant="16" id="OcK-J4-z0s"/>
+                            <constraint firstItem="fbj-mn-ozP" firstAttribute="top" secondItem="dQ1-kb-SBO" secondAttribute="bottom" constant="24" symbolic="YES" id="VhH-Nw-xId"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dQ1-kb-SBO" secondAttribute="leading" id="bMW-bD-iYR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dQ1-kb-SBO" secondAttribute="trailing" id="udy-yy-EMk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QeZ-58-FF7"/>
                     <connections>
-                        <outlet property="descriptionLabel" destination="qkt-RC-00W" id="wZD-rl-Y3x"/>
+                        <outlet property="descriptionLabel" destination="z0z-yA-COU" id="5Qj-TI-fPq"/>
                         <outlet property="platformLabel" destination="1JF-an-6ZI" id="zff-no-f5C"/>
                         <outlet property="sessionIDLabel" destination="sTI-LY-zfa" id="Ebu-WA-EN4"/>
                         <outlet property="titleLabel" destination="2Vi-Uy-heJ" id="flL-A6-dpM"/>
@@ -105,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIH-Cu-YJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1237.5" y="291"/>
+            <point key="canvasLocation" x="259.5" y="291"/>
         </scene>
         <!--Videos-->
         <scene sceneID="7O9-V3-Cgb">
@@ -114,6 +116,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="ChJ-UX-6el">
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rBC-Ij-9az">
                                 <rect key="frame" x="0.0" y="199" width="594" height="66"/>
@@ -121,7 +124,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rBC-Ij-9az" id="V5K-rv-E1b">
                                     <rect key="frame" x="0.0" y="0.0" width="618" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -142,6 +147,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LJ3-mb-IZT">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="n99-UV-5kF" kind="relationship" relationship="rootViewController" id="QhF-DJ-rj1"/>
@@ -157,12 +163,31 @@
                 <splitViewController storyboardIdentifier="SplitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="clk-cX-D8h" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Hpj-PL-kEk" kind="relationship" relationship="masterViewController" id="bHg-ur-OfH"/>
-                        <segue destination="Vlb-iU-O9p" kind="relationship" relationship="detailViewController" id="Bz8-oE-tVy"/>
+                        <segue destination="n0k-6E-kpd" kind="relationship" relationship="detailViewController" id="Bz8-oE-tVy"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hH-YS-mLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3060" y="-279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GXR-SR-XIN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n0k-6E-kpd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KXM-Qh-F80">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vlb-iU-O9p" kind="relationship" relationship="rootViewController" id="erZ-fT-nvn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s62-Az-e4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1237.5" y="291"/>
         </scene>
     </scenes>
 </document>

@@ -35,8 +35,9 @@
     NSDictionary *videoObjectDictionary = [videoArray firstObject];
     if (videoObjectDictionary == nil) return;
     
-    VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
-    [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
+    UINavigationController *childNavVC = [self.splitViewController.viewControllers firstObject];
+    VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
+    [childVC setupVideoDictionaryObject:videoObjectDictionary];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,8 +100,9 @@
     NSArray *videoArray = sectionDictionary[kVideosKey];
     NSDictionary *videoObjectDictionary = videoArray[nextIndexPath.row];
     
-    VideoDetailViewController *viewTmp = self.splitViewController.viewControllers[1];
-    [viewTmp setupVideoDictionaryObject:videoObjectDictionary];
+    UINavigationController *childNavVC = [self.splitViewController.viewControllers firstObject];
+    VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
+    [childVC setupVideoDictionaryObject:videoObjectDictionary];
 }
 
 @end
