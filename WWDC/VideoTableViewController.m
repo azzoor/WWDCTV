@@ -86,8 +86,6 @@
 
     cell.textLabel.text = videoObjectDictionary[kTitleKey];
     cell.detailTextLabel.text = videoObjectDictionary[kSessionIDKey];
-    cell.textLabel.font = [UIFont systemFontOfSize:22];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:22];
     return cell;
 }
 
