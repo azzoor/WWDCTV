@@ -24,7 +24,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // When setupVideoDictionary is called from the TableView Controller, this VC has not yet loaded from NIB.
+    // This causes a bug where the labels show their default NIB contents.
+    // Calling this method in viewDidLoad should cause the Labels to populate after loading from NIB.
+    [self setupVideoDictionaryObject:self.videoDictionary];
 }
 
 - (void)didReceiveMemoryWarning

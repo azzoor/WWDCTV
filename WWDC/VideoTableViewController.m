@@ -35,7 +35,7 @@
     NSDictionary *videoObjectDictionary = [videoArray firstObject];
     if (videoObjectDictionary == nil) return;
     
-    UINavigationController *childNavVC = [self.splitViewController.viewControllers firstObject];
+    UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
     VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
     [childVC setupVideoDictionaryObject:videoObjectDictionary];
 }
@@ -100,7 +100,7 @@
     NSArray *videoArray = sectionDictionary[kVideosKey];
     NSDictionary *videoObjectDictionary = videoArray[nextIndexPath.row];
     
-    UINavigationController *childNavVC = [self.splitViewController.viewControllers firstObject];
+    UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
     VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
     [childVC setupVideoDictionaryObject:videoObjectDictionary];
 }
