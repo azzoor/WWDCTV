@@ -32,12 +32,6 @@
     [self setupVideoDictionaryObject:self.videoDictionary];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 //Setup detail labels
 - (void)setupVideoDictionaryObject:(NSDictionary *)videoDictionary
 {

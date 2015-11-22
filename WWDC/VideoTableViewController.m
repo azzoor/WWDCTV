@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.title = self.conference_id;
     
     NSArray *allVideos = [self readJSONFile];
@@ -38,12 +38,6 @@
     UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
     VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
     [childVC setupVideoDictionaryObject:videoObjectDictionary];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (NSArray *)readJSONFile
