@@ -30,6 +30,7 @@
         if ([conferenceViewArray count] >= 5) break;
 
         UISplitViewController *splitViewController = [storyboard instantiateViewControllerWithIdentifier:@"SplitViewController"];
+        splitViewController.preferredPrimaryColumnWidthFraction = 0.43;
         splitViewController.tabBarItem.title = conferenceID;
         UINavigationController *navController = [splitViewController.viewControllers firstObject];
         VideoTableViewController *vc = (VideoTableViewController *)[navController.viewControllers firstObject];
