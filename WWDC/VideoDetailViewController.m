@@ -16,6 +16,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *platformLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sessionIDLabel;
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
+@property (nonatomic, weak) IBOutlet UIButton *playButton;
 @property (nonatomic, strong) NSDictionary *videoDictionary;
 @end
 
@@ -40,11 +41,14 @@
 //Setup detail labels
 - (void)setupVideoDictionaryObject:(NSDictionary *)videoDictionary
 {
-    self.videoDictionary = videoDictionary;
-    self.titleLabel.text = [self.videoDictionary objectForKey:kTitleKey];
-    self.platformLabel.text = [self.videoDictionary objectForKey:kPlatformKey];
-    self.sessionIDLabel.text = [self.videoDictionary objectForKey:kSessionIDKey];
-    self.descriptionLabel.text = [self.videoDictionary objectForKey:kDescriptionKey];
+    [UIView animateWithDuration:0.3 animations: ^{
+        self.videoDictionary = videoDictionary;
+        self.titleLabel.text = [self.videoDictionary objectForKey:kTitleKey];
+        self.platformLabel.text = [self.videoDictionary objectForKey:kPlatformKey];
+        self.sessionIDLabel.text = [self.videoDictionary objectForKey:kSessionIDKey];
+        self.descriptionLabel.text = [self.videoDictionary objectForKey:kDescriptionKey];
+        [self.view layoutIfNeeded];
+    }];
 }
 
 //Plays the video on selecting the Play Video button
