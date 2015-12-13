@@ -12,6 +12,8 @@
 
 @interface VideoTableViewController ()
 @property (nonatomic, strong) NSArray *sectionArray;
+@property BOOL selectedCellMatchesFocusedCell; // this property is to help the focus engine
+
 @end
 
 @implementation VideoTableViewController
@@ -84,9 +86,36 @@
     return cell;
 }
 
+-(UIView *)preferredFocusedView {
+    // this method override is necessary to focus the PlayButton
+    // when tableView:didSelectRowAtIndexPath: is called
+    if (self.selectedCellMatchesFocusedCell) {
+        UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
+        VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
+        return childVC.playButton;
+    } else {
+        return [super preferredFocusedView];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //
+    // this is kind of hacky but I see no way around it
+    // You can't change focus programatically when the cell is selected
+    // Instead, setting a boolean property and then asking the focus engine to update
+    // then in preferredFocusedView I check for the bool and either call super or give it the view of the play button
+    //
+    self.selectedCellMatchesFocusedCell = YES;
+    [self setNeedsFocusUpdate];
+}
+
 //On changing the focus of the table view this will update the detail view of the SplitViewController
 - (void)tableView:(UITableView *)tableView didUpdateFocusInContext:(UITableViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
 {
+    // this property is to help the focus engine
+    self.selectedCellMatchesFocusedCell = NO;
+    //
+    
     NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
     if (nextIndexPath == nil) return;
 

@@ -16,7 +16,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *platformLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sessionIDLabel;
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
-@property (nonatomic, weak) IBOutlet UIButton *playButton;
 @property (nonatomic, strong) NSDictionary *videoDictionary;
 @end
 

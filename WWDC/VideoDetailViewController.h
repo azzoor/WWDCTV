@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoDetailViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton *playButton;
 - (void)setupVideoDictionaryObject:(NSDictionary *)videoDictionary;
 @end
