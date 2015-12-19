@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="clk-cX-D8h">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="clk-cX-D8h">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbj-mn-ozP">
                                 <rect key="frame" x="20" y="515" width="260" height="86"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" startsMediaSession="YES"/>
                                 </accessibility>
@@ -34,7 +33,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vi-Uy-heJ">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="69"/>
-                                        <animations/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -47,7 +45,6 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTI-LY-zfa">
                                                 <rect key="frame" x="0.0" y="0.0" width="134" height="46"/>
-                                                <animations/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -57,14 +54,12 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4I-jr-tEH">
                                                 <rect key="frame" x="146" y="8" width="10" height="35"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="platform" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-an-6ZI">
                                                 <rect key="frame" x="168" y="8" width="112" height="35"/>
-                                                <animations/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -73,33 +68,46 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <animations/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0z-yA-COU">
                                         <rect key="frame" x="0.0" y="131" width="1225" height="215"/>
-                                        <animations/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-aA-slc">
+                                <rect key="frame" x="311" y="515" width="217" height="86"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" startsMediaSession="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="SDh-bd-s2z"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Un Fav"/>
+                                <connections>
+                                    <action selector="onFavButtonTUI:" destination="Vlb-iU-O9p" eventType="primaryActionTriggered" id="NBN-u6-5D6"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <animations/>
                         <constraints>
                             <constraint firstItem="dQ1-kb-SBO" firstAttribute="top" secondItem="yVh-VR-qhf" secondAttribute="bottom" id="Gba-e9-zjn"/>
                             <constraint firstItem="fbj-mn-ozP" firstAttribute="leading" secondItem="38c-UG-nle" secondAttribute="leadingMargin" id="I8l-hy-TeR"/>
                             <constraint firstItem="MN7-R3-LOA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fbj-mn-ozP" secondAttribute="bottom" constant="16" id="OcK-J4-z0s"/>
                             <constraint firstItem="fbj-mn-ozP" firstAttribute="top" secondItem="dQ1-kb-SBO" secondAttribute="bottom" constant="24" symbolic="YES" id="VhH-Nw-xId"/>
                             <constraint firstAttribute="leadingMargin" secondItem="dQ1-kb-SBO" secondAttribute="leading" id="bMW-bD-iYR"/>
+                            <constraint firstItem="q2e-aA-slc" firstAttribute="leading" secondItem="fbj-mn-ozP" secondAttribute="trailing" constant="31" id="nuH-nC-Kw1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dQ1-kb-SBO" secondAttribute="trailing" id="udy-yy-EMk"/>
+                            <constraint firstItem="q2e-aA-slc" firstAttribute="centerY" secondItem="fbj-mn-ozP" secondAttribute="centerY" id="zJm-Gk-EQY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QeZ-58-FF7"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="z0z-yA-COU" id="5Qj-TI-fPq"/>
+                        <outlet property="favButton" destination="q2e-aA-slc" id="Vka-kg-9qX"/>
                         <outlet property="platformLabel" destination="1JF-an-6ZI" id="zff-no-f5C"/>
                         <outlet property="playButton" destination="fbj-mn-ozP" id="Mqz-QH-hEQ"/>
                         <outlet property="sessionIDLabel" destination="sTI-LY-zfa" id="Ebu-WA-EN4"/>
@@ -117,7 +125,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="ChJ-UX-6el">
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <connections>
                             <outlet property="dataSource" destination="n99-UV-5kF" id="iw7-Dc-zeU"/>
                             <outlet property="delegate" destination="n99-UV-5kF" id="rgj-zS-wZH"/>
@@ -136,7 +143,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LJ3-mb-IZT">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="n99-UV-5kF" kind="relationship" relationship="rootViewController" id="QhF-DJ-rj1"/>
@@ -167,7 +173,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KXM-Qh-F80">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

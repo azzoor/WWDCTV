@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43D82BD51C25EA7C005549ED /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 43D82BD41C25EA7C005549ED /* heart.png */; };
+		43D82BDB1C25EBFF005549ED /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43D82BDA1C25EBFF005549ED /* heart@2x.png */; };
+		43D82BDE1C25ED45005549ED /* FavoritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D82BDD1C25ED45005549ED /* FavoritesManager.m */; };
 		541C84B11BFA953500FE5B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B01BFA953500FE5B5D /* main.m */; };
 		541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B31BFA953500FE5B5D /* AppDelegate.m */; };
 		541C84BD1BFA953500FE5B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541C84BB1BFA953500FE5B5D /* Main.storyboard */; };
@@ -19,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43D82BD41C25EA7C005549ED /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		43D82BDA1C25EBFF005549ED /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
+		43D82BDC1C25ED45005549ED /* FavoritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesManager.h; sourceTree = "<group>"; };
+		43D82BDD1C25ED45005549ED /* FavoritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesManager.m; sourceTree = "<group>"; };
 		541C84AC1BFA953500FE5B5D /* WWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		541C84B01BFA953500FE5B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		541C84B21BFA953500FE5B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +79,8 @@
 				541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */,
 				541C84CD1BFAE2F000FE5B5D /* VideoDetailViewController.h */,
 				541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */,
+				43D82BDC1C25ED45005549ED /* FavoritesManager.h */,
+				43D82BDD1C25ED45005549ED /* FavoritesManager.m */,
 				541C84AF1BFA953500FE5B5D /* Supporting Files */,
 			);
 			path = WWDC;
@@ -86,6 +95,8 @@
 				541C84D01BFAF6DD00FE5B5D /* Header.h */,
 				541C84C81BFADEA400FE5B5D /* videos.json */,
 				541C84B01BFA953500FE5B5D /* main.m */,
+				43D82BD41C25EA7C005549ED /* heart.png */,
+				43D82BDA1C25EBFF005549ED /* heart@2x.png */,
 				541C85461BFBE0F800FE5B5D /* screenshot04.png */,
 				541C85471BFBE0F800FE5B5D /* screenshot03.png */,
 			);
@@ -153,6 +164,8 @@
 				541C85481BFBE0F800FE5B5D /* screenshot04.png in Resources */,
 				541C84BD1BFA953500FE5B5D /* Main.storyboard in Resources */,
 				541C85491BFBE0F800FE5B5D /* screenshot03.png in Resources */,
+				43D82BD51C25EA7C005549ED /* heart.png in Resources */,
+				43D82BDB1C25EBFF005549ED /* heart@2x.png in Resources */,
 				541C84C91BFADEA400FE5B5D /* videos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D82BDE1C25ED45005549ED /* FavoritesManager.m in Sources */,
 				541C84CC1BFAE25900FE5B5D /* VideoTableViewController.m in Sources */,
 				541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */,
 				541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */,

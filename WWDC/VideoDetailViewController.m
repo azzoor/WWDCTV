@@ -8,6 +8,7 @@
 
 #import "VideoDetailViewController.h"
 #import "Header.h"
+#import "FavoritesManager.h"
 
 @import AVKit;
 
@@ -42,6 +43,17 @@
         self.descriptionLabel.text = [self.videoDictionary objectForKey:kDescriptionKey];
         [self.view layoutIfNeeded];
     }];
+    [self setupFavButton];
+}
+
+- (void) setupFavButton {
+    NSString* videoURL = [self.videoDictionary objectForKey:kVideoURLKey];
+    if ([FavoritesManager isVideoAFavorite:videoURL]) {
+        [self.favButton setTitle:@"Un Fav" forState:UIControlStateNormal];
+    }
+    else {
+        [self.favButton setTitle:@"Fav" forState:UIControlStateNormal];
+    }
 }
 
 //Plays the video on selecting the Play Video button
@@ -53,6 +65,23 @@
     [self presentViewController:vc animated:true completion:^{
         [player play];
     }];
+}
+
+//Toggle favorite session state
+- (IBAction)onFavButtonTUI:(UIButton*)sender
+{
+    NSString* videoURL = [self.videoDictionary objectForKey:kVideoURLKey];
+    if ([FavoritesManager isVideoAFavorite:videoURL]) {
+        [FavoritesManager unMarkVideoAsFavorite:videoURL];
+        [self.favButton setTitle:@"Fav" forState:UIControlStateNormal];
+    }
+    else {
+        [FavoritesManager markVideoAsFavorite:videoURL];
+        [self.favButton setTitle:@"Un Fav" forState:UIControlStateNormal];
+    }
+    if ([self.delegate respondsToSelector:@selector(videoInformationHasChanged)]) {
+        [self.delegate videoInformationHasChanged];
+    }
 }
 
 @end

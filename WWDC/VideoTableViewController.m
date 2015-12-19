@@ -7,8 +7,8 @@
 //
 
 #import "VideoTableViewController.h"
-#import "VideoDetailViewController.h"
 #import "Header.h"
+#import "FavoritesManager.h"
 
 @interface VideoTableViewController ()
 @property (nonatomic, strong) NSArray *sectionArray;
@@ -83,6 +83,14 @@
 
     cell.textLabel.text = videoObjectDictionary[kTitleKey];
     cell.detailTextLabel.text = videoObjectDictionary[kSessionIDKey];
+    
+    NSString* videoURL = [videoObjectDictionary objectForKey:kVideoURLKey];
+    if ([FavoritesManager isVideoAFavorite:videoURL]) {
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart"]];
+    }
+    else {
+        cell.accessoryView = nil;
+    }
     return cell;
 }
 
@@ -125,7 +133,14 @@
     
     UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
     VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
+    childVC.delegate = self;
     [childVC setupVideoDictionaryObject:videoObjectDictionary];
+}
+
+
+//VideoDetailViewController Delegate
+- (void) videoInformationHasChanged {
+    [self.tableView reloadData];
 }
 
 @end
