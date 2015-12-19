@@ -35,15 +35,21 @@
 //Setup detail labels
 - (void)setupVideoDictionaryObject:(NSDictionary *)videoDictionary
 {
-    [UIView animateWithDuration:0.3 animations: ^{
-        self.videoDictionary = videoDictionary;
-        self.titleLabel.text = [self.videoDictionary objectForKey:kTitleKey];
-        self.platformLabel.text = [self.videoDictionary objectForKey:kPlatformKey];
-        self.sessionIDLabel.text = [self.videoDictionary objectForKey:kSessionIDKey];
-        self.descriptionLabel.text = [self.videoDictionary objectForKey:kDescriptionKey];
-        [self.view layoutIfNeeded];
-    }];
-    [self setupFavButton];
+    if (videoDictionary) {
+        self.view.alpha = 1.0;//Animating the alpha generates some weird glitches
+        [UIView animateWithDuration:0.3 animations: ^{
+            self.videoDictionary = videoDictionary;
+            self.titleLabel.text = [self.videoDictionary objectForKey:kTitleKey];
+            self.platformLabel.text = [self.videoDictionary objectForKey:kPlatformKey];
+            self.sessionIDLabel.text = [self.videoDictionary objectForKey:kSessionIDKey];
+            self.descriptionLabel.text = [self.videoDictionary objectForKey:kDescriptionKey];
+            [self.view layoutIfNeeded];
+        }];
+        [self setupFavButton];
+    }
+    else {
+        self.view.alpha = 0.0;//Animating the alpha generates some weird glitches
+    }
 }
 
 - (void) setupFavButton {

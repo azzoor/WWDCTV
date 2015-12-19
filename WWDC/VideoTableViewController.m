@@ -12,6 +12,7 @@
 
 @interface VideoTableViewController ()
 @property (nonatomic, strong) NSArray *sectionArray;
+@property (nonatomic, strong) NSArray *visibleArray;
 @property BOOL selectedCellMatchesFocusedCell; // this property is to help the focus engine
 
 @end
@@ -28,18 +29,19 @@
     NSArray *videosForThisConference = [allVideos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", self.conference_id]];
     self.sectionArray = @[@{kConferenceKey: self.conference_id,
                             kVideosKey: videosForThisConference}];
+    self.visibleArray = self.sectionArray;
 
     [self.tableView reloadData];
     
     //Select the first item.
-    NSDictionary *sectionDictionary = [self.sectionArray firstObject];
+    [self selectTheFirstItem];
+}
+
+- (void) selectTheFirstItem {
+    NSDictionary *sectionDictionary = [self.visibleArray firstObject];
     NSArray *videoArray = sectionDictionary[kVideosKey];
     NSDictionary *videoObjectDictionary = [videoArray firstObject];
-    if (videoObjectDictionary == nil) return;
-    
-    UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
-    VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
-    [childVC setupVideoDictionaryObject:videoObjectDictionary];
+    [self setupDetailViewWithVideo:videoObjectDictionary];
 }
 
 - (NSArray *)readJSONFile
@@ -57,12 +59,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.sectionArray.count;
+    return self.visibleArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSDictionary *sectionDictionary = self.sectionArray[section];
+    NSDictionary *sectionDictionary = self.visibleArray[section];
     return [sectionDictionary[kVideosKey] count];
 }
 
@@ -77,7 +79,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
     
-    NSDictionary *sectionDictionary = self.sectionArray[indexPath.section];
+    NSDictionary *sectionDictionary = self.visibleArray[indexPath.section];
     NSArray *videoArray = sectionDictionary[kVideosKey];
     NSDictionary *videoObjectDictionary = videoArray[indexPath.row];
 
@@ -127,20 +129,45 @@
     NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
     if (nextIndexPath == nil) return;
 
-    NSDictionary *sectionDictionary = self.sectionArray[nextIndexPath.section];
+    NSDictionary *sectionDictionary = self.visibleArray[nextIndexPath.section];
     NSArray *videoArray = sectionDictionary[kVideosKey];
     NSDictionary *videoObjectDictionary = videoArray[nextIndexPath.row];
-    
+    [self setupDetailViewWithVideo:videoObjectDictionary];
+}
+
+- (void) setupDetailViewWithVideo:(NSDictionary*) videoObjectDictionary {
     UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
     VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
     childVC.delegate = self;
     [childVC setupVideoDictionaryObject:videoObjectDictionary];
 }
 
-
 //VideoDetailViewController Delegate
 - (void) videoInformationHasChanged {
     [self.tableView reloadData];
 }
+
+- (IBAction)onSessionFilterVC:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) { //ALL
+        self.visibleArray = self.sectionArray;
+    }
+    else {
+        NSDictionary *sectionDictionary = [self.sectionArray firstObject];
+        NSArray *videoArray = sectionDictionary[kVideosKey];
+        
+        NSMutableArray* filteredVideos = [NSMutableArray arrayWithCapacity:videoArray.count];
+        NSArray* favorites = [FavoritesManager arrayOfFavorites];
+        for (NSDictionary* session in videoArray) {
+            if ([favorites containsObject:session[kVideoURLKey]]) {
+                [filteredVideos addObject:session];
+            }
+        }
+        self.visibleArray = @[@{kConferenceKey: self.conference_id,
+                                kVideosKey: filteredVideos}];
+    }
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.visibleArray.count)] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self selectTheFirstItem];
+}
+
 
 @end

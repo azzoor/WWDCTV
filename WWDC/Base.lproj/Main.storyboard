@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="259.5" y="291"/>
         </scene>
-        <!--Videos-->
+        <!--Video Table View Controller-->
         <scene sceneID="7O9-V3-Cgb">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="n99-UV-5kF" customClass="VideoTableViewController" sceneMemberID="viewController">
@@ -130,7 +130,21 @@
                             <outlet property="delegate" destination="n99-UV-5kF" id="rgj-zS-wZH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Videos" id="kQY-dY-lLu"/>
+                    <navigationItem key="navigationItem" id="kQY-dY-lLu">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="OwI-Ty-Adp">
+                            <rect key="frame" x="0.0" y="63" width="634" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                            <segments>
+                                <segment title="All Sessions"/>
+                                <segment title="Only Favourites"/>
+                            </segments>
+                            <connections>
+                                <action selector="onSessionFilterVC:" destination="n99-UV-5kF" eventType="valueChanged" id="Bge-mB-qcA"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCF-er-u8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
