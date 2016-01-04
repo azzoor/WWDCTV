@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="clk-cX-D8h">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="clk-cX-D8h">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -78,16 +78,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-aA-slc">
-                                <rect key="frame" x="311" y="515" width="217" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-aA-slc">
+                                <rect key="frame" x="311" y="515" width="150" height="86"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" startsMediaSession="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="217" id="SDh-bd-s2z"/>
+                                    <constraint firstAttribute="width" constant="150" id="SDh-bd-s2z"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Un Fav"/>
+                                <state key="normal" image="heart_unselected"/>
                                 <connections>
                                     <action selector="onFavButtonTUI:" destination="Vlb-iU-O9p" eventType="primaryActionTriggered" id="NBN-u6-5D6"/>
                                 </connections>
@@ -96,9 +95,11 @@
                         <constraints>
                             <constraint firstItem="dQ1-kb-SBO" firstAttribute="top" secondItem="yVh-VR-qhf" secondAttribute="bottom" id="Gba-e9-zjn"/>
                             <constraint firstItem="fbj-mn-ozP" firstAttribute="leading" secondItem="38c-UG-nle" secondAttribute="leadingMargin" id="I8l-hy-TeR"/>
+                            <constraint firstItem="q2e-aA-slc" firstAttribute="top" secondItem="fbj-mn-ozP" secondAttribute="top" id="KSN-Ck-nC2"/>
                             <constraint firstItem="MN7-R3-LOA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fbj-mn-ozP" secondAttribute="bottom" constant="16" id="OcK-J4-z0s"/>
                             <constraint firstItem="fbj-mn-ozP" firstAttribute="top" secondItem="dQ1-kb-SBO" secondAttribute="bottom" constant="24" symbolic="YES" id="VhH-Nw-xId"/>
                             <constraint firstAttribute="leadingMargin" secondItem="dQ1-kb-SBO" secondAttribute="leading" id="bMW-bD-iYR"/>
+                            <constraint firstItem="q2e-aA-slc" firstAttribute="bottom" secondItem="fbj-mn-ozP" secondAttribute="bottom" id="fUj-5B-YRg"/>
                             <constraint firstItem="q2e-aA-slc" firstAttribute="leading" secondItem="fbj-mn-ozP" secondAttribute="trailing" constant="31" id="nuH-nC-Kw1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dQ1-kb-SBO" secondAttribute="trailing" id="udy-yy-EMk"/>
                             <constraint firstItem="q2e-aA-slc" firstAttribute="centerY" secondItem="fbj-mn-ozP" secondAttribute="centerY" id="zJm-Gk-EQY"/>
@@ -198,4 +199,7 @@
             <point key="canvasLocation" x="-1237.5" y="291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart_unselected" width="64" height="64"/>
+    </resources>
 </document>

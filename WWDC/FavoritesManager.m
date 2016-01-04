@@ -13,35 +13,43 @@
 @implementation FavoritesManager
 
 //Private methods
-+ (NSArray*) arrayOfFavorites {
++ (NSArray *)arrayOfFavorites
+{
     return [[NSUserDefaults standardUserDefaults] objectForKey:kArrayOfFavorites]?:[NSArray array];
 }
 
-+ (NSMutableArray*) mutableArrayOfFavorites {
++ (NSMutableArray *)mutableArrayOfFavorites
+{
     return [NSMutableArray arrayWithArray:[self arrayOfFavorites]];
 }
 
-+ (void) saveArrayOfFavorites:(NSArray*) arrayOfFavorites {
++ (void)saveArrayOfFavorites:(NSArray *)arrayOfFavorites
+{
     [[NSUserDefaults standardUserDefaults] setObject:arrayOfFavorites forKey:kArrayOfFavorites];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 //Public methods
-+ (BOOL) isVideoAFavorite:(NSString*) videoURL {
++ (BOOL)isVideoAFavorite:(NSString *)videoURL
+{
     return [[self arrayOfFavorites] containsObject:videoURL];
 }
 
-+ (void) markVideoAsFavorite:(NSString*) videoURL {
++ (void)markVideoAsFavorite:(NSString *)videoURL
+{
     NSMutableArray* mutableArrayOfFavorites = [self mutableArrayOfFavorites];
-    if (![mutableArrayOfFavorites containsObject:videoURL]) {
+    if (![mutableArrayOfFavorites containsObject:videoURL])
+    {
         [mutableArrayOfFavorites addObject:videoURL];
         [self saveArrayOfFavorites:mutableArrayOfFavorites];
     }
 }
 
-+ (void) unMarkVideoAsFavorite:(NSString*) videoURL {
++ (void)unMarkVideoAsFavorite:(NSString *)videoURL
+{
     NSMutableArray* mutableArrayOfFavorites = [self mutableArrayOfFavorites];
-    if ([mutableArrayOfFavorites containsObject:videoURL]) {
+    if ([mutableArrayOfFavorites containsObject:videoURL])
+    {
         [mutableArrayOfFavorites removeObject:videoURL];
         [self saveArrayOfFavorites:mutableArrayOfFavorites];
     }

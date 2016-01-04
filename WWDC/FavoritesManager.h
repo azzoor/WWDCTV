@@ -13,9 +13,9 @@
 
 @interface FavoritesManager : NSObject
 
-+ (NSArray*) arrayOfFavorites;
-+ (BOOL) isVideoAFavorite:(NSString*) videoURL;
-+ (void) markVideoAsFavorite:(NSString*) videoURL;
-+ (void) unMarkVideoAsFavorite:(NSString*) videoURL;
++ (NSArray *)arrayOfFavorites;
++ (BOOL)isVideoAFavorite:(NSString *)videoURL;
++ (void)markVideoAsFavorite:(NSString *)videoURL;
++ (void)unMarkVideoAsFavorite:(NSString *)videoURL;
 
 @end

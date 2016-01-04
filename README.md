@@ -1,6 +1,8 @@
 # WWDCTV
 This project allows you to watch WWDC videos on your Apple TV. It has been built for tvOS 9.0 using Xcode 7.1
 
+You can also favourite videos and only show favourites, Credit [Julio Andres](https://github.com/Julioacarrettoni) for this awesome feature!
+
 The JSON file contains the following conferences
 * WWDC 2015
 * WWDC 2014
@@ -19,8 +21,14 @@ Trademark Information
 Apple, the Apple logo and other Apple trademarks, service marks, graphics, and logos used in connection with the WWDCTV project are trademarks or registered trademarks of Apple Inc. in the US and/or other countries. Other trademarks, service marks, graphics, and logos used in connection with the WWDCTV project may be the trademarks of their respective owners. You are granted no right or license in any of the aforesaid trademarks, and further agree that you shall not remove, obscure, or alter any proprietary notices (including trademark and copyright notices) that may be affixed to or contained within the Service. 
 
 
-![Alt text](/WWDC/screenshot02.png?raw=true "Screenshot 1")
+![Alt text](/WWDC/screen01.png?raw=true "Screenshot 1")
 
-![Alt text](/WWDC/screenshot03.png?raw=true "Screenshot 2")
+![Alt text](/WWDC/screen02.png?raw=true "Screenshot 2")
 
-![Alt text](/WWDC/screenshot04.png?raw=true "Screenshot 3")
+![Alt text](/WWDC/screen03.png?raw=true "Screenshot 3")
+
+![Alt text](/WWDC/screen04.png?raw=true "Screenshot 4")
+
+![Alt text](/WWDC/screen05.png?raw=true "Screenshot 5")
+
+![Alt text](/WWDC/screen06.png?raw=true "Screenshot 6")

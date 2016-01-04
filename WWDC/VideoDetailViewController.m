@@ -35,7 +35,8 @@
 //Setup detail labels
 - (void)setupVideoDictionaryObject:(NSDictionary *)videoDictionary
 {
-    if (videoDictionary) {
+    if (videoDictionary)
+    {
         self.view.alpha = 1.0;//Animating the alpha generates some weird glitches
         [UIView animateWithDuration:0.3 animations: ^{
             self.videoDictionary = videoDictionary;
@@ -47,19 +48,67 @@
         }];
         [self setupFavButton];
     }
-    else {
+    else
+    {
         self.view.alpha = 0.0;//Animating the alpha generates some weird glitches
     }
 }
 
-- (void) setupFavButton {
-    NSString* videoURL = [self.videoDictionary objectForKey:kVideoURLKey];
-    if ([FavoritesManager isVideoAFavorite:videoURL]) {
-        [self.favButton setTitle:@"Un Fav" forState:UIControlStateNormal];
+- (void)didUpdateFocusInContext:(UIFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
+{
+    if (context.nextFocusedView == self.favButton)
+    {
+        // Favourite button is about to be selected
+        
+        //Change background colour of button and tint colour of button image.
+        self.favButton.backgroundColor = [UIColor colorWithRed:0.576 green:0.580 blue:0.600 alpha:1];
+        self.favButton.tintColor = [UIColor whiteColor];
+
+        //Add Shadow
+        context.nextFocusedView.layer.shadowOffset = CGSizeMake(0, 10);
+        context.nextFocusedView.layer.shadowOpacity = 0.6;
+        context.nextFocusedView.layer.shadowRadius = 15;
+        context.nextFocusedView.layer.shadowColor = [UIColor blackColor].CGColor;
+        context.previouslyFocusedView.layer.shadowOpacity = 0;
+        
+        //Scale button to indicate it has been focused
+        [UIView beginAnimations:@"button" context:nil];
+        [UIView setAnimationDuration:0.3];
+        self.favButton.transform = CGAffineTransformMakeScale(1.15, 1.15);
+        [UIView commitAnimations];
     }
-    else {
-        [self.favButton setTitle:@"Fav" forState:UIControlStateNormal];
+    else if (context.previouslyFocusedView == self.favButton)
+    {
+        // Favourite button is no longer selected
+        
+        //Background colour is removed and tint of button image returned to normal
+        self.favButton.backgroundColor = [UIColor clearColor];
+        self.favButton.tintColor = [UIColor colorWithRed:0.576 green:0.580 blue:0.600 alpha:1];
+        
+        //Remove Shadow
+        context.previouslyFocusedView.layer.shadowOpacity = 0;
+
+        //Remove Scale
+        [UIView beginAnimations:@"button" context:nil];
+        [UIView setAnimationDuration:0.3];
+        self.favButton.transform = CGAffineTransformMakeScale(1, 1);
+        [UIView commitAnimations];
     }
+}
+
+- (void)setupFavButton
+{
+    NSString *videoURL = [self.videoDictionary objectForKey:kVideoURLKey];
+    if ([FavoritesManager isVideoAFavorite:videoURL])
+    {
+        [self.favButton setImage:[[UIImage imageNamed:@"heart_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.favButton setImage:[[UIImage imageNamed:@"heart_unselected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    }
+    self.favButton.tintColor = [UIColor colorWithRed:0.576 green:0.580 blue:0.600 alpha:1];
+    self.favButton.layer.cornerRadius = 8;
 }
 
 //Plays the video on selecting the Play Video button
@@ -74,18 +123,23 @@
 }
 
 //Toggle favorite session state
-- (IBAction)onFavButtonTUI:(UIButton*)sender
+- (IBAction)onFavButtonTUI:(UIButton *)sender
 {
-    NSString* videoURL = [self.videoDictionary objectForKey:kVideoURLKey];
-    if ([FavoritesManager isVideoAFavorite:videoURL]) {
+    NSString *videoURL = [self.videoDictionary objectForKey:kVideoURLKey];
+    if ([FavoritesManager isVideoAFavorite:videoURL])
+    {
         [FavoritesManager unMarkVideoAsFavorite:videoURL];
-        [self.favButton setTitle:@"Fav" forState:UIControlStateNormal];
+        [self.favButton setImage:[[UIImage imageNamed:@"heart_unselected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     }
-    else {
+    else
+    {
         [FavoritesManager markVideoAsFavorite:videoURL];
-        [self.favButton setTitle:@"Un Fav" forState:UIControlStateNormal];
+        [self.favButton setImage:[[UIImage imageNamed:@"heart_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     }
-    if ([self.delegate respondsToSelector:@selector(videoInformationHasChanged)]) {
+    self.favButton.tintColor = [UIColor whiteColor];
+    
+    if ([self.delegate respondsToSelector:@selector(videoInformationHasChanged)])
+    {
         [self.delegate videoInformationHasChanged];
     }
 }

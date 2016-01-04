@@ -37,7 +37,8 @@
     [self selectTheFirstItem];
 }
 
-- (void) selectTheFirstItem {
+- (void)selectTheFirstItem
+{
     NSDictionary *sectionDictionary = [self.visibleArray firstObject];
     NSArray *videoArray = sectionDictionary[kVideosKey];
     NSDictionary *videoObjectDictionary = [videoArray firstObject];
@@ -88,27 +89,33 @@
     
     NSString* videoURL = [videoObjectDictionary objectForKey:kVideoURLKey];
     if ([FavoritesManager isVideoAFavorite:videoURL]) {
-        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart"]];
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart_selected"]];
     }
-    else {
+    else
+    {
         cell.accessoryView = nil;
     }
     return cell;
 }
 
--(UIView *)preferredFocusedView {
+- (UIView *)preferredFocusedView
+{
     // this method override is necessary to focus the PlayButton
     // when tableView:didSelectRowAtIndexPath: is called
-    if (self.selectedCellMatchesFocusedCell) {
+    if (self.selectedCellMatchesFocusedCell)
+    {
         UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
         VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
         return childVC.playButton;
-    } else {
+    }
+    else
+    {
         return [super preferredFocusedView];
     }
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     //
     // this is kind of hacky but I see no way around it
     // You can't change focus programatically when the cell is selected
@@ -135,7 +142,8 @@
     [self setupDetailViewWithVideo:videoObjectDictionary];
 }
 
-- (void) setupDetailViewWithVideo:(NSDictionary*) videoObjectDictionary {
+- (void)setupDetailViewWithVideo:(NSDictionary *)videoObjectDictionary
+{
     UINavigationController *childNavVC = self.splitViewController.viewControllers[1];
     VideoDetailViewController *childVC = [childNavVC.viewControllers firstObject];
     childVC.delegate = self;
@@ -143,22 +151,31 @@
 }
 
 //VideoDetailViewController Delegate
-- (void) videoInformationHasChanged {
+- (void)videoInformationHasChanged
+{
     [self.tableView reloadData];
 }
 
-- (IBAction)onSessionFilterVC:(UISegmentedControl *)sender {
-    if (sender.selectedSegmentIndex == 0) { //ALL
+//Change the filter of the shown sessions, either all sessions or only the favourited one.
+- (IBAction)onSessionFilterVC:(UISegmentedControl *)sender
+{
+    if (sender.selectedSegmentIndex == 0)
+    {
+        //Show All
         self.visibleArray = self.sectionArray;
     }
-    else {
+    else
+    {
+        //Show only favourites
         NSDictionary *sectionDictionary = [self.sectionArray firstObject];
         NSArray *videoArray = sectionDictionary[kVideosKey];
         
         NSMutableArray* filteredVideos = [NSMutableArray arrayWithCapacity:videoArray.count];
         NSArray* favorites = [FavoritesManager arrayOfFavorites];
-        for (NSDictionary* session in videoArray) {
-            if ([favorites containsObject:session[kVideoURLKey]]) {
+        for (NSDictionary* session in videoArray)
+        {
+            if ([favorites containsObject:session[kVideoURLKey]])
+            {
                 [filteredVideos addObject:session];
             }
         }
