@@ -2,100 +2,100 @@
   {
     "order_id": 1,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 01 - tvOS",
+    "session_id": "Session 01 - tvOS",
     "title": "Kickoff",
     "description": "Get an overview of Apple TV, the tvOS SDK, and of key principles, technologies, and frameworks that you can use to create new experiences that define the future of television.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Kickoff/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 2,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 02 - tvOS",
+    "session_id": "Session 02 - tvOS",
     "title": "Designing for Apple TV",
     "description": "Understanding what makes the Apple TV interaction model so unique is essential to designing a great tvOS app. Learn the design principles of the new Apple TV UI and get tips for creating an intuitive user experience with the new Siri Remote.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Designing_for_Apple_TV/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 3,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 03 - tvOS",
+    "session_id": "Session 03 - tvOS",
     "title": "Focus-Driven Interfaces with UIKit",
     "description": "UIKit on tvOS provides the Focus Engine, which controls focus movement and handles interaction with the new Siri Remote. Find out how the Focus Engine moves focus and how you can communicate with it through the Focus API. Discover best practices for implementing focus appearance, responding to focus changes, using focus guides, debugging focus issues, and handling button presses.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Focus-Driven_Interfaces_with_UIKit/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 4,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 04 - tvOS",
+    "session_id": "Session 04 - tvOS",
     "title": "Siri Remote and Game Controllers",
     "description": "The same remote that you use to watch TV can also be used as a dynamic game controller. Tap into the Siri Remote touch surface and harness the built-in accelerometer and gyroscope to deliver engaging gameplay. See how the Game Controller framework can be used to fully integrate MFi-based controllers into gaming designed for the living room.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Siri_Remote_&amp;_Game_Controllers/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 5,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 05 - tvOS",
+    "session_id": "Session 05 - tvOS",
     "title": "On-Demand Resources and Data Storage",
     "description": "An important part of developing for tvOS, supporting On-Demand Resources allows your apps to contain up to 20GB of content. Learn how to create smaller app bundles, enable faster downloads, and add richer app content. Understand space-friendly packaging, dynamic downloading and accessing extended app content, content hosting strategies, download prioritization, and more.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/On-Demand_Resources_&amp;_Data_Storage/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 6,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 06 - tvOS",
+    "session_id": "Session 06 - tvOS",
     "title": "Media Playback",
     "description": "Smooth audio and video playback is vital to the overall Apple TV experience across many types and categories of apps. Gain insight into how to ensure robust playback of high quality media with AVFoundation, how to provide the best native media playback experience within your app, and how FairPlay Protected Streaming can offer industrial strength content protection for your media.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Media_Playback/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 7,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 07 - tvOS",
+    "session_id": "Session 07 - tvOS",
     "title": "Introduction to TVMLKit",
     "description": "TVMLKit is a flexible, template-based framework that's perfect for building beautiful streaming media apps for tvOS. Learn about the TVMLKit template-based layout engine and Javascript application layer. Learn how to provide a native media playback experience, bridge between native and Javascript code, and debug using the Safari Web Inspector.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Introduction_to_TVMLKit/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 8,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 08 - tvOS",
+    "session_id": "Session 08 - tvOS",
     "title": "Best Practices for Designing tvOS Apps",
     "description": "Get essential design guidance for creating tvOS apps and games that are engaging and perfectly tuned for the Apple TV user experience. Learn best practices for designing your loading experience, making authentication quick and easy, providing a valuable and gradual on boarding experience, and optimizing for the Apple TV focus model.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Best_Practices_for_Designing_tvOS_Apps/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 9,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 09 - tvOS",
+    "session_id": "Session 09 - tvOS",
     "title": "Tuning Your tvOS App",
     "description": "The best tvOS apps are not only beautiful and well designed, they're also highly optimized. Learn techniques for diagnosing and correcting graphics performance issues and find out about the performance hit-list you should apply during tvOS development.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/Tuning_Your_tvOS_App/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 10,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 10 - tvOS",
+    "session_id": "Session 10 - tvOS",
     "title": "The Top Shelf",
     "description": "Learn how to take advantage of the Top Shelf area on the Apple TV home screen. Gain insights about the styles available for your content and helpful design tips for implementing personalized dynamic content to encourage people to re-engage with your app.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/The_Top_Shelf/hls.m3u8",
     "platform": "tvOS"
   },
   {
     "order_id": 11,
     "conference": "Tech Talks 2016",
-    "session_id": "Apple TV Tech Talks - Session 11 - tvOS",
+    "session_id": "Session 11 - tvOS",
     "title": "App Store Distribution and Marketing",
     "description": "The App Store on Apple TV lets you deliver immersive experiences on the big screen to customers around the world. Gain insight into choosing the right business model, implementing Universal Purchase, and marketing your tvOS app. Learn about how apps are chosen to be featured on the App Store.",
-    "video_url": 0,
+    "video_url": "http://devstreaming.apple.com/videos/techtalks/2015/tvqjd7yb5k/App_Store_Distribution_and_Marketing/hls.m3u8",
     "platform": "tvOS, iOS, OS X, watchOS"
   },
   {

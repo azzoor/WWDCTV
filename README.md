@@ -4,6 +4,7 @@ This project allows you to watch WWDC videos on your Apple TV. It has been built
 You can also favourite videos and only show favourites, Credit [Julio Andres](https://github.com/Julioacarrettoni) for this awesome feature!
 
 The JSON file contains the following conferences
+* Tech Talks 2016
 * WWDC 2015
 * WWDC 2014
 * WWDC 2013
@@ -26,9 +27,3 @@ Apple, the Apple logo and other Apple trademarks, service marks, graphics, and l
 ![Alt text](/WWDC/screen02.png?raw=true "Screenshot 2")
 
 ![Alt text](/WWDC/screen03.png?raw=true "Screenshot 3")
-
-![Alt text](/WWDC/screen04.png?raw=true "Screenshot 4")
-
-![Alt text](/WWDC/screen05.png?raw=true "Screenshot 5")
-
-![Alt text](/WWDC/screen06.png?raw=true "Screenshot 6")
