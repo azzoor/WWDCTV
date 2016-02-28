@@ -88,13 +88,23 @@
     cell.detailTextLabel.text = videoObjectDictionary[kSessionIDKey];
     
     NSString* videoURL = [videoObjectDictionary objectForKey:kVideoURLKey];
+
+    cell.isAccessibilityElement = YES;
+    NSMutableArray *components = [NSMutableArray arrayWithCapacity:3];
+    if (cell.textLabel.text) [components addObject:cell.textLabel.text];
+    if (cell.detailTextLabel.text) [components addObject:cell.detailTextLabel.text];
+
     if ([FavoritesManager isVideoAFavorite:videoURL]) {
-        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart_selected"]];
+        UIImageView *favoriteView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart_selected"]];
+        favoriteView.accessibilityLabel = NSLocalizedString(@"favourited", nil);
+        [components addObject:favoriteView.accessibilityLabel];
+        cell.accessoryView = favoriteView;
     }
     else
     {
         cell.accessoryView = nil;
     }
+    cell.accessibilityLabel = [components componentsJoinedByString:@", "];
     return cell;
 }
 
