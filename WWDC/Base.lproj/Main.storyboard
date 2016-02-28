@@ -80,9 +80,6 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-aA-slc">
                                 <rect key="frame" x="311" y="515" width="150" height="86"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" startsMediaSession="YES"/>
-                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="SDh-bd-s2z"/>
                                 </constraints>
