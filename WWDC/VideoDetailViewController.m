@@ -102,10 +102,12 @@
     if ([FavoritesManager isVideoAFavorite:videoURL])
     {
         [self.favButton setImage:[[UIImage imageNamed:@"heart_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        self.favButton.accessibilityLabel = NSLocalizedString(@"Remove from Favourites", nil);
     }
     else
     {
         [self.favButton setImage:[[UIImage imageNamed:@"heart_unselected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        self.favButton.accessibilityLabel = NSLocalizedString(@"Add to Favourites", nil);
     }
     self.favButton.tintColor = [UIColor colorWithRed:0.576 green:0.580 blue:0.600 alpha:1];
     self.favButton.layer.cornerRadius = 8;
@@ -130,11 +132,13 @@
     {
         [FavoritesManager unMarkVideoAsFavorite:videoURL];
         [self.favButton setImage:[[UIImage imageNamed:@"heart_unselected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        self.favButton.accessibilityLabel = NSLocalizedString(@"Add to Favourites", nil);
     }
     else
     {
         [FavoritesManager markVideoAsFavorite:videoURL];
         [self.favButton setImage:[[UIImage imageNamed:@"heart_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        self.favButton.accessibilityLabel = NSLocalizedString(@"Remove from Favourites", nil);
     }
     self.favButton.tintColor = [UIColor whiteColor];
     
