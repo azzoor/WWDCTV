@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbj-mn-ozP">
-                                <rect key="frame" x="20" y="515" width="260" height="86"/>
+                                <rect key="frame" x="20" y="970" width="260" height="86"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" startsMediaSession="YES"/>
                                 </accessibility>
@@ -100,7 +100,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-aA-slc">
-                                <rect key="frame" x="311" y="515" width="150" height="86"/>
+                                <rect key="frame" x="311" y="970" width="150" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="SDh-bd-s2z"/>
                                 </constraints>
@@ -114,8 +114,8 @@
                             <constraint firstItem="dQ1-kb-SBO" firstAttribute="top" secondItem="yVh-VR-qhf" secondAttribute="bottom" id="Gba-e9-zjn"/>
                             <constraint firstItem="fbj-mn-ozP" firstAttribute="leading" secondItem="38c-UG-nle" secondAttribute="leadingMargin" id="I8l-hy-TeR"/>
                             <constraint firstItem="q2e-aA-slc" firstAttribute="top" secondItem="fbj-mn-ozP" secondAttribute="top" id="KSN-Ck-nC2"/>
-                            <constraint firstItem="MN7-R3-LOA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fbj-mn-ozP" secondAttribute="bottom" constant="16" id="OcK-J4-z0s"/>
-                            <constraint firstItem="fbj-mn-ozP" firstAttribute="top" secondItem="dQ1-kb-SBO" secondAttribute="bottom" constant="24" symbolic="YES" id="VhH-Nw-xId"/>
+                            <constraint firstItem="MN7-R3-LOA" firstAttribute="top" secondItem="fbj-mn-ozP" secondAttribute="bottom" constant="24" id="OcK-J4-z0s"/>
+                            <constraint firstItem="fbj-mn-ozP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dQ1-kb-SBO" secondAttribute="bottom" constant="24" symbolic="YES" id="VhH-Nw-xId"/>
                             <constraint firstAttribute="leadingMargin" secondItem="dQ1-kb-SBO" secondAttribute="leading" id="bMW-bD-iYR"/>
                             <constraint firstItem="q2e-aA-slc" firstAttribute="bottom" secondItem="fbj-mn-ozP" secondAttribute="bottom" id="fUj-5B-YRg"/>
                             <constraint firstItem="q2e-aA-slc" firstAttribute="leading" secondItem="fbj-mn-ozP" secondAttribute="trailing" constant="31" id="nuH-nC-Kw1"/>
