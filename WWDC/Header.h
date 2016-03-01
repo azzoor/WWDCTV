@@ -15,3 +15,4 @@
 #define kDescriptionKey @"description"
 #define kVideoURLKey @"video_url"
 #define kPlatformKey @"platform"
+#define kSpeakerKey @"speaker"

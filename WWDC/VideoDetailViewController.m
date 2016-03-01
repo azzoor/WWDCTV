@@ -16,6 +16,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *platformLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sessionIDLabel;
+@property (nonatomic, weak) IBOutlet UILabel *speakerLabel;
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, strong) NSDictionary *videoDictionary;
 @end
@@ -43,6 +44,8 @@
             self.titleLabel.text = [self.videoDictionary objectForKey:kTitleKey];
             self.platformLabel.text = [self.videoDictionary objectForKey:kPlatformKey];
             self.sessionIDLabel.text = [self.videoDictionary objectForKey:kSessionIDKey];
+            
+            self.speakerLabel.text = [self.videoDictionary objectForKey:kSpeakerKey];
             self.descriptionLabel.text = [self.videoDictionary objectForKey:kDescriptionKey];
             [self.view layoutIfNeeded];
         }];
