@@ -10,7 +10,7 @@
 #import "Header.h"
 #import "FavoritesManager.h"
 
-@interface VideoTableViewController ()
+@interface VideoTableViewController () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) NSArray *sectionArray;
 @property (nonatomic, strong) NSArray *visibleArray;
 @property BOOL selectedCellMatchesFocusedCell; // this property is to help the focus engine
@@ -32,6 +32,13 @@
     self.visibleArray = self.sectionArray;
 
     [self.tableView reloadData];
+    
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 1.0; //seconds
+    lpgr.delegate = self;
+    [self.tableView addGestureRecognizer:lpgr];
+
     
     //Select the first item.
     [self selectTheFirstItem];
@@ -69,6 +76,11 @@
     return [sectionDictionary[kVideosKey] count];
 }
 
+/// this protects the cells from odd behavior when you refresh a single cell (in this case, when adding a favorite)
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
@@ -80,9 +92,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
     
-    NSDictionary *sectionDictionary = self.visibleArray[indexPath.section];
-    NSArray *videoArray = sectionDictionary[kVideosKey];
-    NSDictionary *videoObjectDictionary = videoArray[indexPath.row];
+    NSDictionary *videoObjectDictionary = [self videoDictionaryForIndexPath:indexPath];
 
     cell.textLabel.text = videoObjectDictionary[kTitleKey];
     cell.detailTextLabel.text = videoObjectDictionary[kSessionIDKey];
@@ -107,6 +117,7 @@
     cell.accessibilityLabel = [components componentsJoinedByString:@", "];
     return cell;
 }
+
 
 - (UIView *)preferredFocusedView
 {
@@ -145,10 +156,7 @@
     
     NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
     if (nextIndexPath == nil) return;
-
-    NSDictionary *sectionDictionary = self.visibleArray[nextIndexPath.section];
-    NSArray *videoArray = sectionDictionary[kVideosKey];
-    NSDictionary *videoObjectDictionary = videoArray[nextIndexPath.row];
+    NSDictionary *videoObjectDictionary = [self videoDictionaryForIndexPath:nextIndexPath];
     [self setupDetailViewWithVideo:videoObjectDictionary];
 }
 
@@ -165,6 +173,7 @@
 {
     [self.tableView reloadData];
 }
+
 
 //Change the filter of the shown sessions, either all sessions or only the favourited one.
 - (IBAction)onSessionFilterVC:(UISegmentedControl *)sender
@@ -194,6 +203,47 @@
     }
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.visibleArray.count)] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self selectTheFirstItem];
+}
+
+
+#pragma mark - Long press / Toggle Favorite
+
+- (void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    // check that we're on a valid cell before setting the favorite.
+    UITableViewCell *focusedCell = (UITableViewCell *)[UIScreen mainScreen].focusedView;
+    if (focusedCell) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:focusedCell];
+        if (indexPath && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+            // set the favorite
+            [self toggleFavorite:[self videoDictionaryForIndexPath:indexPath]];
+ 
+            // refresh the cell
+            [self.tableView beginUpdates];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView endUpdates];
+        }
+    }
+}
+
+- (NSDictionary *)videoDictionaryForIndexPath:(NSIndexPath*) indexPath {
+    NSDictionary *sectionDictionary = self.visibleArray[indexPath.section];
+    NSArray *videoArray = sectionDictionary[kVideosKey];
+    return videoArray[indexPath.row];
+}
+
+
+- (void)toggleFavorite:(NSDictionary *)videoDictionary
+{
+    NSString *videoURL = [videoDictionary objectForKey:kVideoURLKey];
+    if ([FavoritesManager isVideoAFavorite:videoURL])
+    {
+        [FavoritesManager unMarkVideoAsFavorite:videoURL];
+    }
+    else
+    {
+        [FavoritesManager markVideoAsFavorite:videoURL];
+    }
 }
 
 

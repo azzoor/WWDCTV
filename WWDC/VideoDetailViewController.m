@@ -130,6 +130,16 @@
 //Toggle favorite session state
 - (IBAction)onFavButtonTUI:(UIButton *)sender
 {
+    [self toggleFavorite];
+    
+    if ([self.delegate respondsToSelector:@selector(videoInformationHasChanged)])
+    {
+        [self.delegate videoInformationHasChanged];
+    }
+}
+
+- (void)toggleFavorite
+{
     NSString *videoURL = [self.videoDictionary objectForKey:kVideoURLKey];
     if ([FavoritesManager isVideoAFavorite:videoURL])
     {
@@ -144,11 +154,6 @@
         self.favButton.accessibilityLabel = NSLocalizedString(@"Remove from Favourites", nil);
     }
     self.favButton.tintColor = [UIColor whiteColor];
-    
-    if ([self.delegate respondsToSelector:@selector(videoInformationHasChanged)])
-    {
-        [self.delegate videoInformationHasChanged];
-    }
 }
 
 @end
