@@ -4063,7 +4063,7 @@
     "conference": "WWDC 2012",
     "session_id": "Session 516",
     "title": "Integrating Your Games with Game Center",
-    "description": "Competition and reward is central to the social gaming experience. See how to adopt Game Center in your games and learn how easily you can integrate leaderboards and achievements. Dive deeper into challenges to enhance competition among friends in any game. Explore the details of game groups and see exactly how to share Game Center data between related games â€” free and paid, standard and HD, iOS and OS X.",
+    "description": "Competition and reward is central to the social gaming experience. See how to adopt Game Center in your games and learn how easily you can integrate leaderboards and achievements. Dive deeper into challenges to enhance competition among friends in any game. Explore the details of game groups and see exactly how to share Game Center data between related games - free and paid, standard and HD, iOS and OS X.",
     "video_url": "http://devstreaming.apple.com/videos/wwdc/ljbofiuvboiubvoiubseoriubvbip/516/ref.mov",
     "platform": "iOS, OS X"
   },
@@ -4252,7 +4252,7 @@
     "conference": "WWDC 2012",
     "session_id": "Session 706",
     "title": "Networking Best Practices",
-    "description": "iOS and OS X both provide a number of abstractions to simplify and demystify networking and its inherent complexity. This session covers these abstractions in detailâ€”from a TCP connection to NSURLConnectionâ€”and explains best design practices to tune for performance and power.",
+    "description": "iOS and OS X both provide a number of abstractions to simplify and demystify networking and its inherent complexity. This session covers these abstractions in detail, ”from a TCP connection to NSURLConnection,”and explains best design practices to tune for performance and power.",
     "video_url": "http://devstreaming.apple.com/videos/wwdc/ljbofiuvboiubvoiubseoriubvbip/706/ref.mov",
     "platform": "iOS, OS X"
   },
@@ -5483,10 +5483,666 @@
   {
     "order_id": 610,
     "conference": "Tech Talks 2013",
-    "session_id": "Session 18",
     "title": "Hidden iOS 7 Development Gems",
     "description": "With such a wide variety of frameworks and APIs to choose from in Cocoa Touch, it's easy to miss some of the real gems. From tips for how to get the most out of Xcode 5 to harnessing the power of the Objective-C language to entire classes you might not have thought about using, everybody is sure to take away practical and useful tips and tricks to make developing iOS apps easier and more productive.",
     "video_url": "http://devstreaming.apple.com/videos/techtalks/2013/18_Hidden_iOS_7_Development_Gems/ref.mov",
-    "platform": "iOS"
+    "platform": "iOS",
+    "session_id": "Session 18",
+  },
+  {
+    "order_id": 1,
+    "title": "[Objective] C++: What Could Possibly Go Wrong?",
+    "description": "Billy Tobon",
+    "speaker": "Peter Steinberger",
+    "video_url": "https://r5---sn-uxanug5-ntqr.googlevideo.com/videoplayback?expire=1449572009&mime=video%2Fmp4&dur=2173.898&pl=24&itag=22&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&source=youtube&requiressl=yes&lmt=1440240482217189&id=o-ABnEcyHYgINzE9vp-ZZevjFRPfiwXYZGHP-L9l9ftxW4&mm=31&mn=sn-uxanug5-ntqr&upn=wx4_gGndEZI&pcm2cms=yes&key=yt6&ip=144.139.6.82&ms=au&mt=1449550370&mv=m&ipbits=0&initcwndbps=987500&signature=C242C3D9A49231DE547469B36E45E4F63C6314CF.8D93F521D2DF2C85AA374FEF5D95D7398DD0B0B8&ratebypass=yes&sver=3",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 2,
+    "title": "250 Days Shipping With Swift and VIPER",
+    "description": "Massive-View-Controller syndrome got you down? Experiencing increasing difficulty adding new features without breaking others? Learn how an architecture called VIPER will help you squash view controller bloat, decouple your app and fulfill your desires to align to the Single Responsibility Principal. At Coursera, we've been evolving a version of VIPER to ship features with small, contained, testable classes which have distinct responsibilities. Meanwhile we've found Swift to be a welcome companion to VIPER, allowing us to further abstract behavior into enumerations, promote immutability and write safer code. What patterns have we developed? Have we found new functional paradigms useful? Find out!\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Brice Pollock",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/6bcb8aa013bc69bf323e4dc4f67695f2b6b14d0c/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 3,
+    "title": "7 Ways to Enrich the Tech Industry",
+    "description": "Handling the transition from a confused ObjC programmer to a confused Swift programmer.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Aleen Simms",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/940fca91371cbe4af741858d251312f61c2dfea2/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 4,
+    "title": "A Digital Millennium Copyright Activity",
+    "description": "Jay Freeman specializes in building talks at the last minute, typically based on the mix of other talks at the conference and \"timely topics\". At AltConf 2014, Jay did a talk on the low-level implementation details of Swift object layout, a mere three days after Swift had been announced. This year, his chosen topic: the Digital Millennium Copyright Act.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Jay Freeman",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/652df169932bf4ec5e5bf3c3a1a598a35eb9c61e/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 5,
+    "title": "A Eulogy for Objective-C",
+    "description": "With the birth of Swift, we face the passing of Objective-C. To mark this historic moment, long-time Objective-C developer and trainer Aaron Hillegass delivers an impassioned eulogy for a language he knew well.\nDeploying the standard tropes of the genre, we learn about the life of the deceased, we celebrate their finer qualities, and we reflect on how their influence continues to live on, in the minds and work of those who knew them. From Simula, Smalltalk, and Xerox PARC, to NeXTSTEP, OpenStep, and Objective-C 2.0, it's a narrative rich in anecdotes and achievement. But as we ready our farewells, a twist. Could it be that the reports of a passing have been, perhaps, a little exaggerated?\nIf you'd like to share your thoughts about this post, you can comment here.\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data with first-class support for Swift!\nCheck out the Swift docs!",
+    "speaker": "Aaron Hillegass",
+    "video_url": "https://r7---sn-uxanug5-ntqr.googlevideo.com/videoplayback?sver=3&requiressl=yes&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&key=yt6&ip=144.139.6.82&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&mt=1449550248&ratebypass=yes&mn=sn-uxanug5-ntqr&mm=31&ipbits=0&itag=22&pl=24&initcwndbps=1002500&id=o-APxdc6UqK3TcQcgpq1lZ5pG_TAbkXH6TnGvX29r39825&dur=1810.018&ms=au&signature=48655499D4FD4F8601E4E442EA7C12876A0CA15C.7E55DD0BB5F3D0BA5C75E7FCFD17023D4A2DC8B9&mime=video%2Fmp4&mv=m&source=youtube&lmt=1438778263220626&upn=VRX8EoJxT_w&pcm2cms=yes&expire=1449571996",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 6,
+    "title": "Accessibility Is a Moral Imperative",
+    "description": "The session will consist of stories, both personal and otherwise, of how iOS accessibility has changed the world for countless people. I will transition into examples of how ignoring accessibility on the part of developers has a deleterious effect on those users. Such neglect creates a discriminatory gap between those who can get full use from their devices, and those who can't. Because Apple has already done practically all of the heavy lifting, it is unconscionable to fail blind and partially sighted users in this way. I will follow this with three examples of little known accessibility features that are in iOS that are often neglected or blocked by developers. I will conclude with a call to action for developers that will encourage them to be more inclusive, and increase their revenue streams.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "David Johnson",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/07a43038f1b13cacb59c50e06a483131e5366c9e/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 7,
+    "title": "Advanced UITableViews for Fun and Profit",
+    "description": "UITableViews are the bread and butter of many iOS developers. They're fast and modular, forming the core experience of many apps. At Yelp, we have more than 75 separate table views, including all of our most important screens. However, as powerful as UITableView can be, it's not all sunshine and roses. Table views bring in an additional level of complexity, which can quickly get out of hand. Back in 2009, we designed a common architecture for all of our table views to make them easier to use. It was succinct and powerful, aimed at addressing the difficulty of sizing variable-height cells. However, as the team grew from 2 engineers to the 12 we have now, our 6-year old framework started to show its age. It didn't manage complexity well, and was tricky for new developers to learn. I'll be talking about what went wrong with the first architecture, and how we built those lessons into a new system. Our new architecture scales easily, from simple table views with only 1 cell class to complex ones with more than 25 unique cell types. It's a much thinner wrapper over stock UITableViews, making it easier to understand for new developers. And it has encouraged modularity, allowing us to easily create complex views without writing new cells. I'll also discuss some of the tricks we've found along the way, such as using child view controllers inside of cells. Our new framework has worked spectacularly well for us, and has pushed the bounds of what we thought was possible with table views. I'd love to share what we've learned.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Mason Glidden",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/2abc0dcf6578e4b973c69a13fbff9017003bc53c/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 8,
+    "title": "All the I/O News That You Should Care About",
+    "description": "What?!? You didn't sit through all 2 days of Google I/O content to find out what bits were relevant to iOS engineers? Well, luckily for you, Todd did. And he's here to give you a brief summary of everything Google announced at I/O this year that you as an iOS developer might care about. This is a sponsored session, but we promise not to make it too sales-y. Honest.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Todd Kerpelman",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/c4c601c32acbe9531fcff2fea23bf0f81601d120/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 9,
+    "title": "An OSS Education",
+    "description": "Open source started out as a fun hobby for me when I was learning to code professionally. Little did I know that it would soon turn into my profession, literally changing my life in the process. I wouldn't say that the same can happen to everyone, but I've learned a lot on this journey the past few years that should illuminate what it's like to put your career in the hands of open source. That being said, here's my story: I started app development a few years ago, following the 'fake it 'till you make it' principle. I then published three truly terrible 'indie' apps, then talked my way into a job/internship with a tiny startup who had previously contracted out their iOS app. And then, one day, everything changed when I found an amazing open source framework that I began to use in my own apps. After meeting this library's maintainer, they let me start working on this really technical OSS library with nearly no experience with that sort of work. Then, last Spring, I picked up CocoaPods development on a whim when I got bored the first week of the quarter at college. I even got to spend three months working on CocoaPods full-time. I now work for a company whose product is open source. Along the way, I've picked up a real love of discovering the 'perfect' way to build stuff. And I've gotten to work on open source for a living. I've been living out a dream, but I'm sure you can apply some of the lessons I've learned to your own career.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Samuel E. Giddins",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/d3ee48160e50d24dc9e8434a77efa07f9b1c1c2c/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 10,
+    "title": "Being Nice in Open Source",
+    "description": "The ruby world has a phrase, 'Matz is Nice So We Are Nice.' Matz is the nickname for the creator of the ruby language. He is nice. So the community should be too. Given the lack of transparency from Apple around the direction of our toolset we don't really have anyone to use as an example. This talk is about people in the community who are nice, who have done cool things, to say thanks and to steal some ideas from them.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Orta Therox",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/fb20bcd3c1cfddb5e8d25eb8da0ab8f7223637c8/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 11,
+    "title": "Beyond the Grid - Creating Unique, High Performance Interfaces With UICollectionView",
+    "description": "Many iOS developers think of UICollectionView as UITableView with a grid. But with a little math and a lot of creativity, UICollectionView can be used to render timelines, charts and graphs, parallax scrolling landscapes and more. Through working examples, Nathan Eror shows just how flexible and powerful this API really is.\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data with first-class support for Swift!\nCheck out the Swift docs!",
+    "speaker": "Nathan Eror",
+    "video_url": "https://r6---sn-uxanug5-ntqd.googlevideo.com/videoplayback?fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&itag=22&ratebypass=yes&ipbits=0&key=yt6&upn=29dg1tXdoKE&expire=1449572530&mt=1449550843&mv=m&id=o-ANblKfHB_dDoBiendSDV0va0IHkGKVMkbHkhLnJAOri8&ms=au&mm=31&source=youtube&pl=24&mn=sn-uxanug5-ntqd&mime=video%2Fmp4&ip=144.139.6.82&requiressl=yes&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&lmt=1435902123911664&sver=3&signature=51EEB3C1E071F4878A2849176104E3E2D18F851D.4917C1B4BAA82AEE79A551F6E3DDC6B20127B3FC&dur=2117.265&initcwndbps=926250",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 12,
+    "title": "Bottom-Up Programming in Swift",
+    "description": "One of the strengths of Swift is its extensibility, that means that you can build up the language from small components that can be composed together easily. Functions such as sort can be both simple to use, but very powerful when needed. This talk will show how functions that take other functions, and treating functions as data, can be used to improve readability, as well as replicate the dynamic functionality of selectors in Objective-C.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Airspeed Velocity",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/e8c6c65e8f9f68f0af6ac7d0d57e2aa3f0f08092/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 13,
+    "title": "Brew Your Own Cocoa (Framework)",
+    "description": "In this session, I will discuss how to design, implement, distribute, and use a Cocoa Frameworks. The talk would start describing the different options available (Cocoa touch frameworks, static frameworks and development Cocoapods), following a set of guidelines to (re)architect the code into a modular design and finalizing with some recommendations about swift integration, version management, code documentation and testing; including unit and code coverage. I'm planning to illustrate the talk with a small project that refactor some code, wrap it in a framework and later is used in another app\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Billy Tobon",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/fc67f3512f25231f9fb25a1ef73b9e966b209e18/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 14,
+    "title": "Buck: An Alternative Build Tool",
+    "description": "Conventional build tools like xcodebuild are designed to run builds on a single machine. Incremental builds are made faster by keeping the intermediate files of builds and using them for subsequent builds. This doesn't help build times when building the same things on many different machines like in a big engineering team or a CI system. Buck is designed to take advantage of distributed caches so different machines can share build artefacts, saving build time both on CI and developer machines.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Uri Baghin",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/119e4711bf94f8ef84c0c8d988dcdfe2458fa329/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 15,
+    "title": "Building Habits: Keeping Users Engaged",
+    "description": "So you've got some downloads but downloads don't necessarily equate to active users. How can you engage a first time user? How can you keep them coming back to your app? In this talk I'll cover the science behind how to create habits and how to apply it to apps. I'll be looking at: -Building habits -Joyful first experiences -The awesome power of email -Deep-linking -Pushing for good -Helpful help sections This session would be helpful for pretty much anyone involved in making apps - from developers to designers to marketers.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Sally Shepard",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/6175a8433eeee10c5ad4c4b63336abcec0b6b6da/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 16,
+    "title": "Building in Success With Market-First Development",
+    "description": "With more competition than ever, it's harder than ever to build a product company that supports itself through App Store sales. It's especially difficult these days to come up with app ideas that have the earning potential needed to sustain a business over the long term. Far too many developers have a great product idea, build it, and then are disappointed when sales don't follow. But a lot of these products fail in the market not because they're bad apps, but because their creators were thinking like programmers, and not like entrepreneurs. In this presentation, we'll explore the typical \"product first\" approach to app development that most developers employ, and why it so often leads to disappointment in the marketplace. Once we understand what doesn't work, we'll turn our attention to a \"market first\" approach that holds much more promise in creating app ideas that result in profit. You'll learn the most important factors in the success of a product (Spoiler alert: Your app's feature list isn't one of them.) and why niches are the name of the game. Along the way, you'll learn a framework for evaluating potential markets, and how to identify product ideas that customers are happy to pay for.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Charles Perry",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/fa625739310db1b118f474727d7d519d7f8122b7/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 17,
+    "title": "Building Instagram With WatchKit",
+    "description": "Instagram was one of the few lucky apps that were demo'd when Apple had the second Apple Watch keynote. Getting Instagram launch ready with brand new tools and technology in a limited amount of time is a story about trials and tribulations. Come learn about what powers the Instagram Apple Watch app, technical and design decisions that were made, and lessons learned now that we've spent some time using it in the real world.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Ryan Nystrom",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/7e4abc07a1921bab145a465c6d7a2e0d429fe376/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 18,
+    "title": "Building World-Class Product",
+    "description": "It's more important than ever to build products that are great. This session will discuss what it takes to build world class products from design, technology and product standpoints. Topics include: - Beyond the features - Designing and engineering for \"Great\" - Building products that support habits and people - Business design within products, how great products shape business models.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Greg Raiz",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/b04e3cd9ba82531102c03b73ba8043b995e02472/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 19,
+    "title": "Choose Your Character",
+    "description": "See the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data that makes building iOS apps a joy.\nCheck out the docs!",
+    "speaker": "Brianna Wu",
+    "video_url": "https://r6---sn-uxanug5-ntqr.googlevideo.com/videoplayback?ratebypass=yes&sver=3&source=youtube&upn=9aF4Xe516Vc&lmt=1439672711586417&expire=1449571895&pcm2cms=yes&mime=video%2Fmp4&itag=22&ipbits=0&dur=2342.614&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&requiressl=yes&mt=1449550248&id=o-APValGlG1V4a5emij4Jkj74R2xsW1OmyN7sr4rUScnp0&ms=au&pl=24&initcwndbps=1002500&mv=m&signature=A49375101962994AC579CFF71D97A83848CEF6FA.3083611F606BEABD58C3F22699306E1955A8A174&key=yt6&ip=144.139.6.82&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&mm=31&mn=sn-uxanug5-ntqr",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 20,
+    "title": "Cocoa & Robots",
+    "description": "Daniel Steinberg",
+    "speaker": "Taylan Pince",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/3e941cdea4da822f293c7b1c8b1893e800e50297/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 21,
+    "title": "CoreBluetooth and You!",
+    "description": "Bluetooth devices are all around us. Whether in our fitness bands, watches, or door locks, using this technology can lead to powerful experiences for your users. In this talk I will walk through the components of this framework and how to use it to scan for, connection to, and read data from the Bluetooth devices all around us. I will also cover using CoreBluetooth to advertise Bluetooth services from your iOS and OS X devices devices.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Jon Shier",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/8a0cc52baaa16912750959ac9b74b1002ffd670d/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 22,
+    "title": "Correct Behavior Through Type Safety",
+    "description": "Swift has brought a much stronger type system to Cocoa development, which helps catch more bugs at compile-time, before they ship and affect real users. But it's not enough to bring Objective-C patterns to Swift, sprinkle in a few types, and call it done. Justin Spahr-Summers, core contributor to Carthage, ReactiveCocoa & Mantle, explains how types can be used to ensure correctness, how to prevent the existence of invalid states, and why unit tests just aren't enough. Along the way, he'll dive into some specific approaches to correctness that will take advantage of Swift's strong type system.\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data with first-class support for Swift!\nCheck out the Swift docs!",
+    "speaker": "Justin Spahr-Summers",
+    "video_url": "https://r2---sn-uxanug5-ntqr.googlevideo.com/videoplayback?sver=3&id=o-AH8q_bqVjyw1SjioIJcVy_GfiCkFkQdk58UJGui-Mqof&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&ipbits=0&signature=CEF5CF6D375DB0E3F58727BE6FA8401EDEC9CC30.1382711675BA51E1A341A85A6FF23CC42A04E576&pcm2cms=yes&requiressl=yes&ip=144.139.6.82&key=yt6&lmt=1437136118331214&dur=1323.607&source=youtube&ratebypass=yes&expire=1449572251&pl=24&mime=video%2Fmp4&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&upn=fXz47_fYi-w&itag=22&ms=au&initcwndbps=976250&mv=m&mt=1449550617&mn=sn-uxanug5-ntqr&mm=31",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 23,
+    "title": "Deprecated Incorporated",
+    "description": "Natasha Murashev",
+    "speaker": "Josh Michaels",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/685b2a730e98c6c58c6b90b506a50d9526b7b206/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 24,
+    "title": "Design Is Not for Designers",
+    "description": "In this talk, we'll take a look at examples of products that are designed well, not because of how they look, but how they work. The small decisions made along the way that contribute to success. We'll also talk about avoiding the common pitfalls of design for design's sake. Over-abundant animations, the obsession with \"clean\" interfaces that lack function, making our products so opinionated that only we like them\"”all the things we designers tend to fawn over that don't matter much to most people. Finally, we'll talk about balancing the need to serve our customers' best interests, vs. our own needs to survive as a company. You can't build products for people, after all, if you go out of business. Successful design solves problems. Well designed products meet needs. Focus your energy there, and you will build something truly great.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Joe Cieplinski",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/b31f06afea48b675c8421ef9267224004ff99625/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 25,
+    "title": "Designing for Fun",
+    "description": "Making your app fun to use requires more than sprinkling a little gamification on top. It requires thoughtful imagination and experimentation. Sarah will highlight some expert perspectives on theories of play and behavioral psychology, and and how we can apply these ideas in mobile app design. She'll also share prototyping techniques and how to validate whether a design will actually be fun.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Sarah Allen",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/0ef6cd990819bc08d71b28b894437ffdb529ae02/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 26,
+    "title": "Designing for Humans",
+    "description": "Intro to Twitter Fabric",
+    "speaker": "Dave Wiskus",
+    "video_url": "https://r5---sn-uxanug5-ntqr.googlevideo.com/videoplayback?mv=m&pl=24&mt=1449550108&ms=au&id=o-AN0J7hoeLN019mQvZ3-M3PaHaFoe8XehYB-H98MuIZqM&requiressl=yes&ip=144.139.6.82&ratebypass=yes&mn=sn-uxanug5-ntqr&source=youtube&mm=31&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&lmt=1439299823251796&expire=1449571787&initcwndbps=1002500&key=yt6&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&signature=5D1FB9716AA970A29CA27C96EE59ABDC78C2EB34.61E8CCFCD0B46AFF9896ED0513D8F562306F1230&sver=3&ipbits=0&upn=qqNBCpQeCLk&itag=22&mime=video%2Fmp4&pcm2cms=yes&dur=2172.342",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 27,
+    "title": "Designing Mobile Apps for Kids",
+    "description": "Young children can seem to \"get\" touch devices right away, but there are a number of things you can do to maximize their engagement and minimize their frustration. Through a tour of apps currently on the market, we'll explore techniques such as using characters as guides, giving audio and visual input feedback, and monitoring inactivity timeouts. We'll also cover which gestures are the most and least intuitive for small fingers, how the way children hold tablets affects UI, and what content to include for parents (and for legal reasons) and how. You'll leave with a better understanding of the UI elements necessary to make a captivating children's app that parents are happy to buy.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Kathryn Rotondo",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/032cd0f48714ba6b3a7480f4fe074063e6f27be6/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 28,
+    "title": "Designing With Cognitive Science in Mind",
+    "description": "What's faster for humans: searching by color or shape? Why do we notice small icons in the corner of screens? Why it is hard to manage interruptions in our daily jobs? We design digital products and we sell pixels. Yet, we should remember they are meant for humans. In this presentation I am gonna address how well known mechanisms of cognition (like pattern recognition, peripheral attention and working memory) impact the way we perceive user interfaces. Getting to know these mechanisms will help you improve the way you design products.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Cesare Rocchi",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/742b03dc0484bfd0d9e710afae93546ed494a5c2/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 29,
+    "title": "Development for Artists, Poets, and Lovers",
+    "description": "Learn how everyone, even you, can write code. Michael explains how he learned to write code even with a full time day job and life responsibilities. Explore learning resources, finding mentorship and community, basic project management, and basic development patterns. We'll even learn to avoid common pitfalls.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Michael Critz",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/750185975f713105a2ddd05f76b7d91e8a444e40/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 30,
+    "title": "Everything You Wanted to Know About Crypto, but Were Afraid to Ask",
+    "description": "Massive-View-Controller syndrome got you down? Experiencing increasing difficulty adding new features without breaking others? Learn how an architecture called VIPER will help you squash view controller bloat, decouple your app and fulfill your desires to align to the Single Responsibility Principal. At Coursera, we've been evolving a version of VIPER to ship features with small, contained, testable classes which have distinct responsibilities. Meanwhile we've found Swift to be a welcome companion to VIPER, allowing us to further abstract behavior into enumerations, promote immutability and write safer code. What patterns have we developed? Have we found new functional paradigms useful? Find out!\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Michael Gorbach",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/6edf62d09d0b38a357bb333f5bee479376eaa844/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 31,
+    "title": "Fixing the Swift Tooling Problem",
+    "description": "A common refrain about Swift is that the language is great, but the the tooling makes writing it a big pain. In this talk, I'll show that as Swift developers, we don't have to wait for Apple to improve the tooling (though that would be nice). We can do it ourselves.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "JP Simard",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/28790266c552e497aa22271ab708bb1a0713c36c/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 32,
+    "title": "Functional Programming in Swift",
+    "description": "I'll be talking about Functional Programming in Swift: what can we learn, and what are useful techniques we can apply to our code today? Rather than an abstract talk, we'll look into concrete code examples.",
+    "speaker": "Chris Eidhof",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/c3a01e6c1e51c06a30b5efe964430ede3589e5d2/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 33,
+    "title": "Functional Reactive Awesomeness With Swift",
+    "description": "Functional or reactive programming? Why not both? Ash Furrow begins this talk with a brief history of functional reactive programming and ReactiveCocoa, before explaining the motivations behind its use. Along the way, he walks us through three excellent demos that showcase functional reactive programming in Swift, before discussing advanced concepts like MVVM in iOS.\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data with first-class support for Swift!\nCheck out the Swift docs!",
+    "speaker": "Ash Furrow",
+    "video_url": "https://r1---sn-uxanug5-ntqr.googlevideo.com/videoplayback?mt=1449550843&mv=m&pl=24&id=o-AKKQr4BDZ-Pp8Y81aEN1_3Ti4iDLVE_zvHTNBCXaKd1o&ms=au&ip=144.139.6.82&requiressl=yes&source=youtube&mm=31&mn=sn-uxanug5-ntqr&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&lmt=1439661070501400&expire=1449572496&key=yt6&initcwndbps=926250&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&signature=40D8859843923C5283771B434A19ECB68AA0A35F.14E72CEA6EEA6F5E450F8ABC448D5CAC1012E094&sver=3&ipbits=0&upn=3K7CSGuvmfg&itag=22&mime=video%2Fmp4&pcm2cms=yes&dur=2395.231&ratebypass=yes",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 34,
+    "title": "Git as a Document Format",
+    "description": "Traditional Cocoa file formats each have specific advantages and pitfalls. Wil Shipley, co-founder of The Omni Group & Delicious Monster, explores their history, and sketches out a utopian alternative. Looking at the traditional way of adding undo and redo to Cocoa apps, he explains how Git -- the library, not the command-line tools -- magically solves all those problems, and basically gives you everything you ever wanted, for free. It may also come with a pony. ðŸ´\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data with first-class support for Swift!\nCheck out the Swift docs!",
+    "speaker": "Wil Shipley",
+    "video_url": "https://r3---sn-uxanug5-ntqz.googlevideo.com/videoplayback?lmt=1439435505272482&requiressl=yes&ratebypass=yes&mt=1449550729&mv=m&ms=au&ip=144.139.6.82&key=yt6&upn=I0cdjFXGc8A&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&mn=sn-uxanug5-ntqz&id=o-AFQIMSi4JbYfErpYbEX4-pg4UdDBZfT_Zf_J2Gc0_sjc&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&sver=3&pcm2cms=yes&signature=B8FAE1F3F1E1FD1A19FCEDF85D243A5B57F934FC.088D1DFEB6D603FAB49D948B41755E176D28D81F&initcwndbps=961250&mm=31&ipbits=0&source=youtube&dur=1981.567&itag=22&pl=24&mime=video%2Fmp4&expire=1449572438",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 35,
+    "title": "Helping Stakeholders With Change",
+    "description": "Every year WillowTree has to anticipate and adjust to the new features of iOS (and other platforms) with an eye on helping our clients understand it all. We'll explore how to convince your stakeholders to transition to new versions and embrace change.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Kevin Snead (Willow Tree)",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/65cfe696ed5b5fe62768542f1c4cea6abab76f6e/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 36,
+    "title": "How Indoor Location Will Change Your User Experience",
+    "description": "Indoor location is here (in iOS 9 it might even be out of beta!) and it is going to change the way your users will interact with your software and their environment. Since 2011 Art Processors have been working with indoor location to change the way visitors to cultural institutions change the way they interact with the space. In 2011 they wrote The O for MONA (in Hobart, Tasmania) used by over 1.5 million visitors to the gallery since to self navigate through the space, learning to love (and hate) the artworks as they went. We've helped create interactive plays at zoos, automated audio discovery experiences at museums and other fun stuff, all involving indoor location. In this session Scott will give a rundown on the current state of play of indoor location and how it goes beyond iBeacons to allow you to engage with your users in new and novel ways.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Scott Brewer",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/5371e0dbf0afd285c85cc9bc0c514f0dc0b5fe1c/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 37,
+    "title": "How to Get Your App Noticed by the Media",
+    "description": "There's no procedure to follow that guarantees the media is going to pay attention to your app. But in this 30 minute session, Peter will break down for you what it takes for your app to get noticed and reported on.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Peter Cohen",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/ff9625259cac5700da7ea1fec80164568d013770/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 38,
+    "title": "Humanities x Technology",
+    "description": "What does it mean for the industry to approach technology with a humanities approach? Companies are beginning to learn that users care more about how they can use a product, rather than its technical specifications. Dropbox's Ashley Nelson-Hornstein passionately explains how this marriage of sciences and humanities creates truly beautiful experiences, from video games to learning platforms.\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data that makes building iOS apps a joy.\nCheck out the docs!",
+    "speaker": "Ashley Nelson-Hornstein",
+    "video_url": "https://r4---sn-uxanug5-ntqd.googlevideo.com/videoplayback?itag=22&mime=video%2Fmp4&pl=24&expire=1449571544&mm=31&mn=sn-uxanug5-ntqd&mt=1449549849&mv=m&initcwndbps=962500&ms=au&ipbits=0&upn=I5CxIH9RoOM&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ip=144.139.6.82&requiressl=yes&pcm2cms=yes&signature=B8696AF934A6A46DB63DDEA1B6163B4D71E5E146.C8C10B8A9CF84154AD6F74BD43FEFE6923D4D547&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&id=o-AN9UzU8WqftBlPTBEa-natS-LaPub9BwQqAsxcLBWgxS&sver=3&ratebypass=yes&source=youtube&dur=1541.131&lmt=1435764941882782&key=yt6",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 39,
+    "title": "Hyper-Growth Panel",
+    "description": "Ben Sandofsky, John Adams, Phil Fung, Mohammad Shahanigian, Tina Wen \"When you joined your startup, everyone fit at one lunch table. Five years later there are 3,000 employees. How do you scale iPhone development from two developers to sixty? This panel has early engineers from Facebook, Twitter, and other hyper-growth companies sharing their challenges and how they solved them.\"\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Ben Sandofsky",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/a07f9b64ef03dc2a9f063acd062736e2ed4aedc9/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 40,
+    "title": "I Have No Idea What I'm Doing",
+    "description": "Handling the transition from a confused ObjC programmer to a confused Swift programmer.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Graham Lee",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/6484588c9a213b8662afde839f6e81938e24467b/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 41,
+    "title": "Imagine a Fully Diverse & Inclusive World",
+    "description": "I'll be talking about Functional Programming in Swift: what can we learn, and what are useful techniques we can apply to our code today? Rather than an abstract talk, we'll look into concrete code examples.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Melinda Briana Epler",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/0d4f1339f1f7cb0418050aef3c68a657ad60508d/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 42,
+    "title": "iMore Keynote Reaction Panel",
+    "description": "Guy English, Serenity Caldwell, Rene Ritchie and Peter Cohen react to the keynote in this panel discusion.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Guy English",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/e3b78b13169e78fcb5aad27959244bf3a6b3a769/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 43,
+    "title": "Intro to Twitter Fabric",
+    "description": "Twitter Fabric provides mobile app developers with a suite of SDKs to help build better apps. In this session, Alex will provide an overview of Fabric's solutions for dealing with common developer challenges around app stability, distribution, monetization and user identity.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Alex Singer",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/d66e372ee8bdd660acf03fb726ff8cc7bddfbc10/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 44,
+    "title": "iOS GPU Programming With Swift & Metal",
+    "description": "This talk describes the steps required to implement a particle system in Swift that runs on the GPU using Apple's Metal technology. It starts with a system containing a humble 250,000 particles and through a series of optimisations works up to a system containing over four million particles running at 40fps.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Simon Gladman",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/a4529785c921ae3d2c4a4ed9aac2126e4fea2f0f/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 45,
+    "title": "Legal Survival Kit",
+    "description": "This session covers several tips from a seasoned business lawyer to help keep developers out of trouble and help them get paid. The talk will include basics about business entities, contracts, and other legal concepts indie and contract developers should understand. When it comes to legal troubles, an ounce of prevention is truly worth a pound of cure.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "David Sparks",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/c1e8c5aec38a74b9c1df0b08a6197da3df18bcdc/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 46,
+    "title": "Less Data, More Research",
+    "description": "The idea of my presentation is to demonstrate a QoS aware information retrieval framework that will complement Apple's ResearchKit. This will aid the medical research community to increase the degree of participation among iPhone user groups and capture more significant and relevant data. (https://developer.apple.com/researchkit/researchkit-technical-overview.pdf). The success of the proposed ResearchKit widely depends on the users' participation and willingness to share large amount of information collected via mobile phone sensors. My proposed research kit helper will provide probabilistic data aggregation and query processing filters to minimise network traffic while still maintaining the quality of survey results. A number of quality adjustable query processing filters will be prebuilt as part of my ResearchKit helper and will be configurable via backend. The core features and strengths of the proposed ResearchKit Helper framework: - It will provide basic data processing filters. Researchers are not interested in bulk data (motion sensor or activity data from phone), rather statistically significant representative data will be produced. - A number of generic probabilistic models will be pre-built (e.g. Merge distributions) - This will enable the research community to engage larger audience. - Degree of participation will be higher as this will minimise the data traffic for research survey - Configurable data processing filters that can be adjusted from a remote backend. - Proposed framework will also facilitate anonymization of data for protecting user's privacy\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Kh Mahmudul Alam",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/b3ddbfff09d1560d89cf5ad8615e925dac1a706e/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 47,
+    "title": "Lessons in App PR: How to Launch",
+    "description": "Getting the tech press to write about your app can drive huge amounts of traffic and give you instant credibility. The challenge is in getting the press to care enough to write about your app in the first place. Come learn about pitching to the press and our successful launch of Astropad. Learn about our launch strategy and some tips and tricks which drove over 225k visitors to our site in only a few weeks.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Matt Ronge",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/927ac8f9604e62a632177c063bcf1315bd9a34c1/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 48,
+    "title": "Localization! Because ì˜ì–´ n'est pas è¶³å¤Ÿ por todo el mundo",
+    "description": "You know you should be using NSLocalizedString in all your user-facing text, but how *exactly* is your app going to break the first time you translate it for real? (Be honest: how creative have you been with format strings?) We'll create .xliff files that you & your translators can actually use, and enjoy a lovely romp through grammar issues that will haunt your best dreams. (I'm happy to do this in 30 or 60 minutes--or if you want me to just rant about my favorite language issues, I can lightning talk it up too ;) )\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Laura Savino",
+    "video_url": "https://realm.io/news/altconf-laura-savino-localization-because-n-est-pas-por-todo-el-mundo/",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 49,
+    "title": "Making a Lasting Impact Panel",
+    "description": "Chris Eidhof",
+    "speaker": "Victor Agreda",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/44f60be5b3cf4bb96a0ef35a389c9a0103794a36/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 50,
+    "title": "Making an Indie Game? Do Your Own PR!",
+    "description": "Save cash and increase the impact of your game by doing your own PR. TouchArcade.com Editor-in-Chief, Eli Hodapp, details effective PR tactics that will enable you to stack the odds in your favor, will ensure your game launches with a bang, and will help you avoid all the horror stories he's witnessed. PR is itself a game, and Hodapp has the cheat guide you need to get your name on the high scores charts.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Eli Hodapp",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/5258efddac7d279ec3ea2835eef187c96590f4b5/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 51,
+    "title": "Making Apple Devices Work Together",
+    "description": "Most of us have more than one iOS device. Whether it's an iPhone and iPad, iPhone and Apple Watch, or iPad and MacBook, these devices no longer live in isolation. Bound together by iCloud and your Apple ID, these devices are more powerful when they work together. This session will cover making them communicate using new and old APIs alike: Handoff, AirDrop, and iCloud. We'll cover the best way to allow your users to respond to notifications on any device, as well as how to share files and preferences among all of your users' devices. If you don't have a Mac app but do have a website, we'll cover transferring control back and forth using Handoff, as well as sharing passwords with iCloud Keychain. By the end, this session will have you multitasking like a pro.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Jeff Kelley",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/ae2bcba2df0078d01a63c71b6db3d03f9d4fc263/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 52,
+    "title": "Making Online Learning Accessible",
+    "description": "I am currently building a startup focused on providing business education and want to share lessons learned in making an online platform accessible and inclusive to all types of learners.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Kortney Ryan Ziegler",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/0d21e2f439c067db81e9d516a0e32d4e031d7013/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 53,
+    "title": "Making Users Smile, Laugh, and Cry",
+    "description": "A lot of our jobs are about designing \"delightful experiences\", but what makes a user feel delight? As iOS developers we care for nice applications and good user experiences. Equally, we've also often talked about user centric design, and hence keep their goals and expectations in mind, while trying to achieve our business goals. With this talk however I'd like to take the discussion a bit further from onboarding and hamburger menus, and more towards designing/developing for human experiences. Human experience is, in my opinion, centered around fitting into a user's daily tasks, moods, and lifestyle, with the goal to enhance them. As is often said nowadays, phones are an extension of our every day lives, and as apps demanding time and attention, we should make sure to do so in the most natural and cohesive ways. This means taking it further than platform affordances. Our apps shouldn't just fit into the style of the device, and other apps similar, it should fit into a user's every day life. In order to do so, we need to better understand people, their interactions with mobile, and the extent to which design can affect moods and perception.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Maxim Cramer",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/eb1366ea7a548b531296297ba8525281cce4c3b2/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 54,
+    "title": "Making Your Mobile Backend Work for You",
+    "description": "Great apps use powerful backend services to deliver a customized user experiences, but who wants to waste time building, deploying, and managing one? In this session, we'll explore common problems like user authentication, push notifications, on & offline data, application telemetry, and user engagement - and we'll use Microsoft Azure to quickly stand up a backend ready to scale to millions of users.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Chris Anderson",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/22605c7682e4931b298074c205e9fdb281dc5611/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 55,
+    "title": "Mastering Time and Space: Testing the Objective-C Runtime",
+    "description": "Testing in Objective C is not as powerful or useful as it could be. The out-of-the-box tools are still a bit anemic and a lot of testing ends up being confined to unit testing because it's too much of a hassle, or too slow, to test what should be. I'd like to cover some improvements to how BDD can be done, using Cedar as an example, and several custom extensions to Objective-C's runtime (which would function in any testing environment). ('Try that in swift!' could be a subtitle for this talk. . . . ) Specifically, I'll cover how to intercede in the runtime to make time pass without waiting, to intercept & munge network communications (including with NSURLSession, which was more challenging than previous techniques), to collapse animations, and how to otherwise get Apple's systems out of the way to test what you want to. I'll also talk about what to test and what not to test, to dial in the level of coverage desired to fit the situation. The techniques covered include method swizzling and posing, so I selected 'advanced' above. But depending on the audience, I could focus on the more interesting and unusual tools or try to support a mechanism for making BDD testing drive good implementations. I'm pretty flexible. If this is the place to be less than humble, I've got a 5.0 rating on 'ratemyprofessor.com', won Berkeley's teaching award, and in general try to be entertaining.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Joshua Marker",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/200c32806ff3208a229de6a93b21e08d6babc248/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 56,
+    "title": "NSFWObjectiveC",
+    "description": "At Facebook, we already created and use a very popular reactive UI library for the web: ReactJS. We have recently decided to use similar functional design techniques to build a reactive UI layer on iOS called **ComponentKit**, which is now open sourced. This talk will focus on the description of the advantages of reactive UI, the structure and concepts behind ComponentKit. Finally, it will touch down on other libraries we built at FB that address problems in the same area, namely react native and Async Display Kit.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Sash Zats",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/75b95998e9d7c681f1549a33f347abff82d5a27e/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 57,
+    "title": "Object-Oriented Functional Programming",
+    "description": "Accessibility Is a Moral Imperative",
+    "speaker": "Saul Mora",
+    "video_url": "https://r2---sn-uxanug5-ntqr.googlevideo.com/videoplayback?id=o-AN9xWETmB5v-PrjbG0v3_ewERYQwznWgYx1iaIEc6gRi&mm=31&mn=sn-uxanug5-ntqr&pl=24&ip=144.139.6.82&ms=au&mt=1449550108&mv=m&ipbits=0&initcwndbps=1002500&mime=video%2Fmp4&pcm2cms=yes&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&key=yt6&signature=6C5C6EDFE2207762C5FD41557BBB2BC382F7FD9F.CAA29FFE67FF30D504B103FF0778C254992E3829&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&requiressl=yes&lmt=1435908192972966&source=youtube&dur=2018.487&ratebypass=yes&sver=3&upn=YfRzVPeA_24&expire=1449571846&itag=22",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 58,
+    "title": "Overloading Comparison",
+    "description": "As developers, we constantly compare ourselves to others -- more knowledgeable developers, more popular apps, more lucrative businesses -- and this can cause us to be unhappy and unproductive. Join Ray Wenderlich as he shares the story of his battle with comparison, and how you can overload comparison with a more positive alternative!\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data with first-class support for Swift!\nCheck out the Swift docs!",
+    "speaker": "Ray Wenderlich",
+    "video_url": "https://r3---sn-uxanug5-ntqz.googlevideo.com/videoplayback?requiressl=yes&initcwndbps=976250&mime=video%2Fmp4&key=yt6&ip=144.139.6.82&pcm2cms=yes&dur=1554.483&lmt=1439890397623455&ratebypass=yes&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&source=youtube&ms=au&ipbits=0&pl=24&mv=m&mt=1449550496&id=o-AKVPHYB-tTRkfWIUG0HKpSjKXhjiPC96Mp3KtcHUSI3x&mm=31&expire=1449572139&upn=GIFelIpiJaE&itag=22&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&mn=sn-uxanug5-ntqz&signature=E252AF88DDABADCFEB263D35F1705B555E78CDF3.4421AC249E9135DE85812A4DE7A6BFC2920408DC&sver=3",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 59,
+    "title": "Paymenternationalization: Wild Ways International Users Buy Things",
+    "description": "So, if you live outside the U.S., there are a lot of crazy ways to pay for stuff online! There's Alipay in China, Boleto in Brazil, and all sorts of other things that aren't credit cards that your international users would love to use to give you their money but probably can't. In this talk, I'll review a few of these different international payment methods and what makes them interesting. Given the setting, I'll also talk about how Apple Pay fits into all this and where it might go next!\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Jack Flintermann",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/ca302a4f8dbea613e1659062f59d1fa6431be8a4/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 60,
+    "title": "Perceptual Debugging",
+    "description": "This talk is about approaching debugging as a perceptual learning task, covering how to use tools to reveal the patterns of your running application - to help understand what healthy and non-healthy flow within your app look like. More specifically this will cover the combination of things like audio breakpoints, sets of Instruments recording in unison, and in-app visual elements each adding to a mental image of what your application is doing. The interesting aspect of this talk is advocating for the use of tools traditionally used for debugging in order to gain a mental model of health before diagnosing problems.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Kendall Gelner",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/0299b5e40a68cd8d998cbb6c97271684575d9cc3/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 61,
+    "title": "Planetary Engineering",
+    "description": "Maybe it's naÃ¯ve to start a company to do more than make money. Maybe it's arrogant to want to change the world. Still, the skills used to make a million-user iPhone game can also be used to make a toolbox for the supporters of a political candidate, or to help people with special needs. Our bright future has been hijacked by absurd greed and petty bickering. The information war and climate change have become impossible to ignore. Rich people have started building massive yachts. The internet got mean. The rising pressure to sell out or get beat up makes it hard not to become cynical or depressed. When others consider a problem unsolvable, engineers break them down into smaller problems until a team of experts and the necessary materials can be brought together to craft a solution. We have the power, as the creative class, to stand up and take responsibility for the future we are building. We have the power to achieve our potential, to live up to our dreams. We have the power to tackle planet-scale problems.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Mike Lee",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/0bf9d694bc7d1b928be59b08d529543306601b80/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 62,
+    "title": "Playgrounds Are for Kids",
+    "description": "Swift Playgrounds are a great place for experienced developers to easily experiment, but they hold much greater promise. In this talk, Daniel Steinberg draws on his own history of programming education, presenting a moving narrative that explores what Playgrounds could mean for the education of our children, and those who have never programmed before.\nWith live demonstrations, we learn about the evolution of teaching technology, from BASIC to Logo's Turtle, Squeak and Scratch. Developing the lineage, Daniel adds his own: an open source Turtle Playground for teaching Swift to kids. Recommending a \"fun-down approach\" to learning, we end on a call to build and share our own teaching tools, and help raise the programmers of the future.\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!\n\n\n\nSee the discussion on Hacker News.\n\n\nTranscription below provided by Realm: a replacement for SQLite & Core Data with first-class support for Swift!\nCheck out the Swift docs!",
+    "speaker": "Daniel Steinberg",
+    "video_url": "https://r3---sn-uxanug5-ntqz.googlevideo.com/videoplayback?sver=3&ratebypass=yes&dur=1705.343&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&lmt=1438437031044903&ipbits=0&source=youtube&initcwndbps=966250&requiressl=yes&mm=31&ip=144.139.6.82&mn=sn-uxanug5-ntqz&pl=24&expire=1449572615&mt=1449550952&upn=Ahz6G8WAtXs&mv=m&pcm2cms=yes&ms=au&signature=73726467ACD770E0014AACA81C12E106B242FC3C.4C184F29431CAC60B4CDD66153983A7C05081057&itag=22&id=o-ADcmO_Eqd_iRq4cyYsS5MxDlO9Not6DC6dckY_9iNMDb&mime=video%2Fmp4&key=yt6",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 63,
+    "title": "Power Up Your Animations! ðŸ’«",
+    "description": "Swift Thinking",
+    "speaker": "Marin Todorov",
+    "video_url": "https://r8---sn-uxanug5-ntqr.googlevideo.com/videoplayback?upn=FC6B3-cWlx0&signature=218945AE1C5C4443BA9B8FB9ED245CF8E9954D70.7E16B8BE93FDF99B06B93A0ED22A668FA75B8302&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ipbits=0&initcwndbps=975000&source=youtube&id=o-AOK4Ztck_Fg3GAVtzVKC1z_FD5d0_UcsfUgeh1w7Uh4Z&sver=3&lmt=1437645234155423&ip=144.139.6.82&key=yt6&expire=1449571629&dur=1674.019&mv=m&mt=1449549969&ms=au&requiressl=yes&ratebypass=yes&mn=sn-uxanug5-ntqr&mm=31&pcm2cms=yes&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&mime=video%2Fmp4&itag=22&pl=24",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 64,
+    "title": "Practical Declarative Programming",
+    "description": "A practical introduction to declarative programming and how it can be applied to the real world. The talk will cover functional programming concepts, which allows you to write clearer, declarative and testable code. Along with lightly touching on reactive functional programming. Usually, functional programming is taught by abstract functional techniques. Which are often hard to relate and understand the real benefits. Instead this talk goes for a different approach by showing examples of unfunctional, imperative code that people write every day and how we can translate that to a functional declarative style. This talk is not a talk on reactive/functional programming, it will just cover how these styles allow us to write declarative code (note: it would a great talk to have before a talk on ReactiveCocoa or such).\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Kyle Fuller",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/ec6d31fe0adab1ef277e67e7c5b2470b6109437b/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 65,
+    "title": "Reactive UI on iOS - Just Tell Me What, Not How!",
+    "description": "At Facebook, we already created and use a very popular reactive UI library for the web: ReactJS. We have recently decided to use similar functional design techniques to build a reactive UI layer on iOS called **ComponentKit**, which is now open sourced. This talk will focus on the description of the advantages of reactive UI, the structure and concepts behind ComponentKit. Finally, it will touch down on other libraries we built at FB that address problems in the same area, namely react native and Async Display Kit.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Benjamin Loulier",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/d7a59fdc705286ca1914522ce1b01cd56c1dcd0a/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 66,
+    "title": "Safer Swift Code With Value Types",
+    "description": "New language, new programming paradigms. Since the release of Swift the Cocoa developer community is increasingly experimenting with functional programming. How can we adopt FP principles in real world applications? This talk will discuss how apps can make use of immutable value types to avoid common code smells and bugs. I will also discuss other benefits of a functional approach, such as modularity through function composition. Throughout the talk I will illustrate the architecture of a non-trivial iOS app that relies strongly on immutable value types. The main goal of this talk is to show pragmatic approaches for applying functional programming principles to common problems in Cocoa development.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Benjamin Encz",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/67e46018aff84069ece4b167aa059ba6e19574ba/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 67,
+    "title": "So, That Just Happened",
+    "description": "An easy-going look back at the announcements of WWDC 2015 and their possible implications. There may also be a bit involving a ukulele.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "James Dempsey",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/40470fe460f0db58bf25a7d647f640d06c5d9b78/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 68,
+    "title": "State of the Alt",
+    "description": "Rob Elkin gives an overview of this years planning and what the future holds for Altconf. A panel discussion and QA will follow a short presentation.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Rob Elkin",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/ed4cc37f0bffebeb6bfd70bd1a6df2a18615dbf6/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 69,
+    "title": "Successful Test-Driven Development on iOS",
+    "description": "Test Driven Development on iOS has presented some challenges due to lack of tools and support from Apple. This talks is how to achieve TDD and BDD on iOS: - continuous integration Jenkins, Xcode bots - break down and parallelize builds - setup simulator with preset state - Facebook, Permissions - Unit Spec, App Specs, Acceptance Tests - Fakes, Mocks - Stub network calls for tests - Test data modeling - Running backend locally for tests - Image comparison to assert on expected look - Recommending tooling to help overcome the challenges of Apple's limited support - Kiwi - KIF - KIF-Kiwi - xctool - Swift - Swift to ObjC bridging\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Glen Tregoning",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/a8230e1ad9a2ea85330be39c0a262d806ff1bbc2/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 70,
+    "title": "Swift Funtime",
+    "description": "This talk will quickly revisit what we loved about the Objective-C runtime and then explore if/how those things are possible in Swift. It will dive into how to do dynamic introspection, changing behaviour and inspecting private API is still possible or why it is not. In addition to that, the audience will also learn a bunch about Swift under the hood and how using pure Swift or Objective-C compatible objects differ in practice.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Boris BÃ¼gling",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/fc0fc638ddf905e8b7f637e69448f3ab0534a036/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 71,
+    "title": "Swift Thinking",
+    "description": "Sarah Allen",
+    "speaker": "Natasha Murashev",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/c1db9e8ca12a215981708f5fc5103a7dba419f7e/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 72,
+    "title": "Sysadmins and the Middle Way",
+    "description": "Learning to walk the Middle Way, a constant process of compassionately yielding with whatever arises, has changed they way I approach being an Apple sysadmin. Much like how Apple once talked about the intersection between technology and liberal arts, sysadmins similarly need to be mindful of the intersection between how they manage devices and the quality of user experience they deliver. I'll show you how solutions like thin-provisioning and Apple's Device Enrollment Program have helped me understand how to step out of the way of better user experiences at Cincinnati Children's Hospital.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Jason Butler",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/851aeba3e4610f2ca49a474a5a026c26046699cd/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 73,
+    "title": "Technology Journalism Panel",
+    "description": "Peter Cohen, Victor Agreda, Jim Dalrymple, Neil Ticktin, Dave Hamilton \"How to get your app noticed by the media\"\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Peter Cohen",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/398160e06321511348eb6c2078cdbc8748df5552/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 74,
+    "title": "The Lessons of GamerGate",
+    "description": "Jean MacDonald, Brianna Wu, Aleen Simms At AltConf 2014, Brianna Wu electrified the audience with her talk,",
+    "speaker": "Jean MacDonald",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/61ffcbded0a1dc7176755b73d6608d4c8e67976c/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 75,
+    "title": "The Social Coding Contract",
+    "description": "Social coding has revolutionized how we share code with others. Tools like GitHub, CocoaPods, and Carthage make publishing and consuming code so convenient that our dependencies have become smaller and more numerous. Nowadays, most projects quickly resemble a Jenga tower, with layer upon layer of poorly understood single points of failure. Despite our progress, Justin Searls urges us to pause and reflect on our relationship with open source. Convenience and ego drive most open source adoption, he says, but these shortsighted motivations raise long-term problems we will need to clearly identify if we ever hope to solve them.",
+    "speaker": "Justin Searls",
+    "video_url": "https://r3---sn-uxanug5-ntqz.googlevideo.com/videoplayback?ip=144.139.6.82&key=yt6&mn=sn-uxanug5-ntqz&mm=31&ms=au&ipbits=0&mv=m&initcwndbps=987500&mt=1449550370&signature=AFDCDECE92F4110B7EC1B3C5D5C7CD2875BC7B3F.9517D09165A430ED36CB3F759770FA211F6C9A5C&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&requiressl=yes&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&dur=1735.830&id=o-AMkw0xalVsv-fc8htq9zXoXBJ4NbepEUrp8Qp1koNzyY&mime=video%2Fmp4&itag=22&expire=1449572025&pcm2cms=yes&upn=IfSJwpPn0F8&lmt=1436252988447798&ratebypass=yes&sver=3&source=youtube&pl=24",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 76,
+    "title": "The Stylish Objective-C Developer's Guide to Swift",
+    "description": "You've browsed the Swift Language Docs or sat through a Swift 101 presentation. The next step? Building a production app. But how do we convert what we've learned in Objective-C to Swift. Which new Swift features give the most benefit? Which time honored Objective-C patterns are still usable? Should I keep using my favorite 3rd party libraries like AFNetworking? What about dependency management like CocoaPods? This presentation will guide you through the practical decisions every dev will encounter while starting to build production apps in Swift.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Jaim Zuber",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/097da53195b19f973a503e630f06b9ec4b8d55c4/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 77,
+    "title": "The User",
+    "description": "Enchanted by the success of experience-oriented companies like Apple and Uber, we all want to create the ultimate integrated customer experience in our apps. Many companies say customer experience is the most important way they'll differentiate in the future, and we're awash in consultant reports and webinars on how to create great experiences. But even the most beautifully crafted customer experiences often fail catastrophically when they come into contact with the real world. The problem is a basic misunderstanding of the lives of normal people. We research the needs of users and create elaborate",
+    "speaker": "Michael Mace",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/85635373f6dffa82daab3813e21dac58aaf96594/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 78,
+    "title": "The Worst Code",
+    "description": "I Have No Idea What I'm Doing",
+    "speaker": "Michele Titolo",
+    "video_url": "https://r5---sn-uxanug5-ntqr.googlevideo.com/videoplayback?mv=m&source=youtube&ms=au&lmt=1435779067476091&ip=144.139.6.82&key=yt6&fexp=9408376%2C9408710%2C9416126%2C9416673%2C9416985%2C9417683%2C9419354%2C9420452%2C9420716%2C9422596%2C9422618%2C9423563%2C9423643%2C9423662%2C9423991%2C9424774%2C9425545%2C9425739&mt=1449550843&pcm2cms=yes&mn=sn-uxanug5-ntqr&mm=31&id=o-AKhH0oA8t71Ld4-i5ycsxcdDLz2vgEsFEjkBJYwbhVgW&dur=1874.337&requiressl=yes&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ipbits=0&expire=1449572575&ratebypass=yes&initcwndbps=926250&upn=GRLrcwuggak&signature=3DE20E997CD05E47483B085BA68524D8217783AC.43F9DF1D593BC0D6823B6D2AE4C506C18EB95AC4&mime=video%2Fmp4&sver=3&itag=22&pl=24",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 79,
+    "title": "What Haskell Teaches Me About Swift",
+    "description": "Designing Mobile Apps for Kids",
+    "speaker": "Abizer Nasir",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/061292962189f07c7ef141f881d45276605eac4c/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 80,
+    "title": "Why Did the Developer Cross the Road?",
+    "description": "A lot of our jobs are about designing \"delightful experiences\", but what makes a user feel delight? As iOS developers we care for nice applications and good user experiences. Equally, we've also often talked about user centric design, and hence keep their goals and expectations in mind, while trying to achieve our business goals. With this talk however I'd like to take the discussion a bit further from onboarding and hamburger menus, and more towards designing/developing for human experiences. Human experience is, in my opinion, centered around fitting into a user's daily tasks, moods, and lifestyle, with the goal to enhance them. As is often said nowadays, phones are an extension of our every day lives, and as apps demanding time and attention, we should make sure to do so in the most natural and cohesive ways. This means taking it further than platform affordances. Our apps shouldn't just fit into the style of the device, and other apps similar, it should fit into a user's every day life. In order to do so, we need to better understand people, their interactions with mobile, and the extent to which design can affect moods and perception.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Chris Lueck",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/d9ddd0fb365869e9e16f41f82813a21eacca7a76/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 81,
+    "title": "With a Little Help",
+    "description": "All of a sudden you hold a junior developer's life in your hand. Now, you have to water it and let it grow! But does it crave sunlight or need the protection of partial shade? In our industry, we are perpetually inventing, so we are continually teaching and learning from each other. I'll show you how education practices can help you in your daily life as a mentor and colleague, and how one-on-one teaching environments can be validating and transformative.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Mila Schultz",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/cb9994b3db6bef6549350d2b4f1da688fd455ece/file.mp4",
+    "conference": "AltConf 2015"
+  },
+  {
+    "order_id": 82,
+    "title": "Writing a Technical Book - The Survival Guide",
+    "description": "Writing a technical book is generally viewed as a labor of love, since the economics of it tend to be pretty bad. As with many things viewed as a labor of love, they can be emotionally draining and its important to practice self-care throughout the process. We will examine some of the different tools frequently used and how this can shape the writing process, common sources of stress, methods to handle deadlines, the benefits and downsides of having co-authors, and techniques to survive the process. This talk is based on my experiences writing two books on the same topic (solo & as a co-author) with two different publishers (Packt & O'Reilly) as well as conversations with other technical authors at a variety of publishers.\n\n\n\nThis talk was recorded at AltConf 2015. Watch all the videos!",
+    "speaker": "Holden Karau",
+    "video_url": "https://embed-ssl.wistia.com/deliveries/6158fe0258e5abeac01d551233328c3d91860c5a/file.mp4",
+    "conference": "AltConf 2015"
   }
 ]
