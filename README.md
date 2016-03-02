@@ -5,6 +5,7 @@ You can also favourite videos and only show favourites, Credit [Julio Andres](ht
 
 The JSON file contains the following conferences
 * Tech Talks 2016
+* AltConf 2015
 * WWDC 2015
 * WWDC 2014
 * WWDC 2013
