@@ -23,6 +23,8 @@
 {
     [super viewDidLoad];
     
+    self.tableView.remembersLastFocusedIndexPath = YES;
+    
     self.title = self.conference_id;
     
     NSArray *allVideos = [self readJSONFile];
