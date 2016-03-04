@@ -118,6 +118,22 @@
     self.favButton.layer.cornerRadius = 8;
 }
 
+#pragma mark - Play/Pause Press
+
+- (void) pressesEnded:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event {
+    for (UIPress *press in presses)
+    {
+        if (press.type == UIPressTypePlayPause)
+        {
+            [self playVideo:nil];
+        }
+        else
+        {
+            [super pressesEnded:presses withEvent:event];
+        }
+    }
+}
+
 //Plays the video on selecting the Play Video button
 - (IBAction)playVideo:(id)sender
 {

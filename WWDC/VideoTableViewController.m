@@ -9,6 +9,7 @@
 #import "VideoTableViewController.h"
 #import "Header.h"
 #import "FavoritesManager.h"
+#import "PlayerViewController.h"
 
 @interface VideoTableViewController () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) NSArray *sectionArray;
@@ -40,7 +41,6 @@
     lpgr.minimumPressDuration = 1.0; //seconds
     lpgr.delegate = self;
     [self.tableView addGestureRecognizer:lpgr];
-
     
     //Select the first item.
     [self selectTheFirstItem];
@@ -206,6 +206,39 @@
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.visibleArray.count)] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self selectTheFirstItem];
 }
+
+#pragma mark - Play/Pause Press
+
+- (void) pressesEnded:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event {
+    for (UIPress *press in presses)
+    {
+        if (press.type == UIPressTypePlayPause)
+        {
+            [self playPausePress];
+        }
+        else
+        {
+            [super pressesEnded:presses withEvent:event];
+        }
+    }
+}
+
+- (void)playPausePress {
+    UITableViewCell *focusedCell = (UITableViewCell *)[UIScreen mainScreen].focusedView;
+    if (focusedCell) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:focusedCell];
+        if (indexPath) {
+            // get the video to play
+            NSDictionary *videoDictionary = [self videoDictionaryForIndexPath:indexPath];
+            NSString *videoURL = videoDictionary[kVideoURLKey];
+            PlayerViewController *playerVC = [[PlayerViewController alloc] initWithVideoURL:videoURL];
+            [self presentViewController:playerVC animated:YES completion:^{
+                [playerVC play];
+            }];
+        }
+    }
+}
+
 
 
 #pragma mark - Long press / Toggle Favorite
