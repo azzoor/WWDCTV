@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1359C35E1C894CF60008C290 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1359C35D1C894CF60008C290 /* PlayerViewController.m */; };
 		43D82BDE1C25ED45005549ED /* FavoritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D82BDD1C25ED45005549ED /* FavoritesManager.m */; };
 		541C84B11BFA953500FE5B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B01BFA953500FE5B5D /* main.m */; };
 		541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C84B31BFA953500FE5B5D /* AppDelegate.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1359C35C1C894CF60008C290 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		1359C35D1C894CF60008C290 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		43D82BDC1C25ED45005549ED /* FavoritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesManager.h; sourceTree = "<group>"; };
 		43D82BDD1C25ED45005549ED /* FavoritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesManager.m; sourceTree = "<group>"; };
 		541C84AC1BFA953500FE5B5D /* WWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,8 @@
 				541C84CB1BFAE25900FE5B5D /* VideoTableViewController.m */,
 				541C84CD1BFAE2F000FE5B5D /* VideoDetailViewController.h */,
 				541C84CE1BFAE2F000FE5B5D /* VideoDetailViewController.m */,
+				1359C35C1C894CF60008C290 /* PlayerViewController.h */,
+				1359C35D1C894CF60008C290 /* PlayerViewController.m */,
 				43D82BDC1C25ED45005549ED /* FavoritesManager.h */,
 				43D82BDD1C25ED45005549ED /* FavoritesManager.m */,
 				541C84AF1BFA953500FE5B5D /* Supporting Files */,
@@ -178,6 +183,7 @@
 				541C84B41BFA953500FE5B5D /* AppDelegate.m in Sources */,
 				541C84CF1BFAE2F000FE5B5D /* VideoDetailViewController.m in Sources */,
 				541C84B11BFA953500FE5B5D /* main.m in Sources */,
+				1359C35E1C894CF60008C290 /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

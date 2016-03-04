@@ -9,6 +9,7 @@
 #import "VideoDetailViewController.h"
 #import "Header.h"
 #import "FavoritesManager.h"
+#import "PlayerViewController.h"
 
 @import AVKit;
 
@@ -20,12 +21,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, strong) NSDictionary *videoDictionary;
 
-@property (nonatomic, strong) AVPlayerItem *playerItem;
-@property (nonatomic, strong) AVPlayer *player;
-@property (nonatomic, strong) AVPlayerViewController *playerViewController;
-@property (nonatomic, assign) BOOL isVideoPlaying;
-
-
 @end
 
 @implementation VideoDetailViewController
@@ -33,19 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.isVideoPlaying = NO;
     
     // When setupVideoDictionary is called from the TableView Controller, this VC has not yet loaded from NIB.
     // This causes a bug where the labels show their default NIB contents.
     // Calling this method in viewDidLoad should cause the Labels to populate after loading from NIB.
     [self setupVideoDictionaryObject:self.videoDictionary];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    if (self.isVideoPlaying) {
-        self.isVideoPlaying = NO;
-        [self.playerItem removeObserver:self forKeyPath:@"status"];
-    }
 }
 
 //Setup detail labels
@@ -134,40 +121,11 @@
 //Plays the video on selecting the Play Video button
 - (IBAction)playVideo:(id)sender
 {
-    NSURL *url = [NSURL URLWithString:self.videoDictionary[kVideoURLKey]];
-    AVAsset *asset = [AVAsset assetWithURL:url];
-    
-    self.playerItem = [AVPlayerItem playerItemWithAsset:asset];
-    [self.playerItem addObserver:self
-                      forKeyPath:@"status"
-                         options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial)
-                         context:NULL];
-    
-    self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
-    
-    self.playerViewController = [AVPlayerViewController new];
-    self.playerViewController.player = self.player;
-    
-    [self presentViewController:self.playerViewController animated:true completion:^{
-        self.isVideoPlaying = YES;
-        [self.player play];
+    NSString *videoURL = self.videoDictionary[kVideoURLKey];
+    PlayerViewController *playerVC = [[PlayerViewController alloc] initWithVideoURL:videoURL];
+    [self presentViewController:playerVC animated:YES completion:^{
+        [playerVC play];
     }];
-}
-
-- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    if (object == self.playerItem && [keyPath isEqualToString:@"status"]) {
-
-        // Handle video load failures.
-        if (self.playerItem.status == AVPlayerStatusFailed) {
-            UIAlertController * alert=  [UIAlertController
-                                          alertControllerWithTitle:@"Video Error"
-                                          message:@"There was an error loading the content."
-                                          preferredStyle:UIAlertControllerStyleAlert];
-            
-            [self.playerViewController presentViewController:alert animated:YES completion:NULL];
-        }
-        //NSLog(@"Status: %ld\n\n", (long)self.playerItem.status);
-    }
 }
 
 
