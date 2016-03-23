@@ -9,6 +9,7 @@
 #import "VideoDetailViewController.h"
 #import "Header.h"
 #import "FavoritesManager.h"
+#import "PlayerViewController.h"
 
 @import AVKit;
 
@@ -19,6 +20,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *speakerLabel;
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, strong) NSDictionary *videoDictionary;
+
 @end
 
 @implementation VideoDetailViewController
@@ -116,27 +118,44 @@
     self.favButton.layer.cornerRadius = 8;
 }
 
+#pragma mark - Play/Pause Press
+
+- (void) pressesEnded:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event {
+    for (UIPress *press in presses)
+    {
+        if (press.type == UIPressTypePlayPause)
+        {
+            [self playVideo:nil];
+        }
+        else
+        {
+            [super pressesEnded:presses withEvent:event];
+        }
+    }
+}
+
 //Plays the video on selecting the Play Video button
 - (IBAction)playVideo:(id)sender
 {
-    AVPlayerViewController *vc = [AVPlayerViewController new];
-    AVPlayer *player = [AVPlayer playerWithURL:[NSURL URLWithString:self.videoDictionary[kVideoURLKey]]];
-    vc.player = player;
-    [self presentViewController:vc animated:true completion:^{
-        [player play];
+    NSString *videoURL = self.videoDictionary[kVideoURLKey];
+    PlayerViewController *playerVC = [[PlayerViewController alloc] initWithVideoURL:videoURL];
+    [self presentViewController:playerVC animated:YES completion:^{
+        [playerVC play];
     }];
 }
+
 
 //Toggle favorite session state
 - (IBAction)onFavButtonTUI:(UIButton *)sender
 {
-    [self toggleFavorite];
-    
+	[self toggleFavorite];
+   
     if ([self.delegate respondsToSelector:@selector(videoInformationHasChanged)])
     {
         [self.delegate videoInformationHasChanged];
     }
 }
+
 
 - (void)toggleFavorite
 {
