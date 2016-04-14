@@ -18,9 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray *videoArray = [self readJSONFile];
+    [self downloadJSONFile];
     
-    // Override point for customization after application launch.
+    //Setup the tabBarController
+    self.tabBarController = [UITabBarController new];
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
+- (void)initializeRootViewControllerWith:(NSArray*)videoArray {
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     NSMutableArray *conferenceViewArray = [NSMutableArray new];
     
@@ -37,31 +45,37 @@
         vc.conference_id = conferenceID;
         [conferenceViewArray addObject:splitViewController];
     }
-
-    //Setup the tabBarController
-    self.tabBarController = [UITabBarController new];
-    self.tabBarController.viewControllers = conferenceViewArray;
-    self.window.rootViewController = self.tabBarController;
-    [self.window makeKeyAndVisible];
-    
-    return YES;
+    [self.tabBarController setViewControllers: conferenceViewArray animated:NO];
 }
 
-- (NSArray *)readJSONFile
+// JSON location = https://raw.githubusercontent.com/azzoor/WWDCTV/master/WWDC/videos.json
+- (void)downloadJSONFile {
+    NSURLSession* downloadSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURL* url = [NSURL URLWithString:@"https://raw.githubusercontent.com/azzoor/WWDCTV/master/WWDC/videos.json"];
+    [[downloadSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (((NSHTTPURLResponse*)response).statusCode == 200) {
+            
+        }
+        NSArray* videoArray = [self parseJSONData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self initializeRootViewControllerWith:videoArray];
+        });
+    }] resume];
+}
+
+- (NSArray *)parseJSONData:(NSData*)data
 {
     //Get JSON
     NSMutableArray *videoArray = [NSMutableArray new];
     NSError *error = nil;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    self. allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
     //Sorts the conferences by order_id this has been onfigured to ensure the newer conferences appear first.
     NSSortDescriptor *brandDescriptor = [[NSSortDescriptor alloc] initWithKey:kOrderIDKey ascending:true];
-    allVideos = [allVideos sortedArrayUsingDescriptors:@[brandDescriptor]];
+    self.allVideos = [self.allVideos sortedArrayUsingDescriptors:@[brandDescriptor]];
     
     //Get the conference ids which are to be used for the tabBarController
-    for (NSDictionary *videoDictionary in allVideos)
+    for (NSDictionary *videoDictionary in self.allVideos)
     {
         if (![videoArray containsObject:[videoDictionary objectForKey:kConferenceKey]])
         {

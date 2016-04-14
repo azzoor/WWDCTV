@@ -28,8 +28,8 @@
     
     self.title = self.conference_id;
     
-    NSArray *allVideos = [self readJSONFile];
-    NSArray *videosForThisConference = [allVideos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", self.conference_id]];
+    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    NSArray *videosForThisConference = [appDelegate.allVideos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"conference CONTAINS[cd] %@", self.conference_id]];
     self.sectionArray = @[@{kConferenceKey: self.conference_id,
                             kVideosKey: videosForThisConference}];
     self.visibleArray = self.sectionArray;
@@ -52,17 +52,6 @@
     NSArray *videoArray = sectionDictionary[kVideosKey];
     NSDictionary *videoObjectDictionary = [videoArray firstObject];
     [self setupDetailViewWithVideo:videoObjectDictionary];
-}
-
-- (NSArray *)readJSONFile
-{
-    //Get JSON File
-    NSError *error = nil;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSArray *allVideos = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    
-    return allVideos;
 }
 
 #pragma mark - Table view data source
