@@ -53,10 +53,14 @@
     NSURLSession* downloadSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURL* url = [NSURL URLWithString:@"https://raw.githubusercontent.com/azzoor/WWDCTV/master/WWDC/videos.json"];
     [[downloadSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSArray* videoArray;
         if (((NSHTTPURLResponse*)response).statusCode == 200) {
-            
+            videoArray = [self parseJSONData:data];
+        } else {
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videos" ofType:@"json"];
+            NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+            videoArray = [self parseJSONData:fileData];
         }
-        NSArray* videoArray = [self parseJSONData:data];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self initializeRootViewControllerWith:videoArray];
         });
