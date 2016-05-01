@@ -59,6 +59,8 @@
                       forKeyPath:@"status"
                          options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial)
                          context:NULL];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemFinishedPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem];
 }
 
 //Plays the video on selecting the Play Video button
@@ -85,8 +87,8 @@
     }
 }
 
-
-
-
+- (void)itemFinishedPlaying:(NSNotification*)notification {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
