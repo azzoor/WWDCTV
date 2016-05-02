@@ -34,6 +34,8 @@
         self.isVideoPlaying = NO;
         [self.playerItem removeObserver:self forKeyPath:@"status"];
     }
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem];
 }
 
 - (void)didReceiveMemoryWarning {
