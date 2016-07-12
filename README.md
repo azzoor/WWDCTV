@@ -4,6 +4,7 @@ This project allows you to watch WWDC & Tech Talks videos on your Apple TV. It h
 You can also favourite videos and only show favourites, Credit [Julio Andres](https://github.com/Julioacarrettoni) for this awesome feature!
 
 The JSON file contains the following conferences
+* WWDC 2016
 * Tech Talks 2016
 * AltConf 2015
 * WWDC 2015
